@@ -1,0 +1,38 @@
+# Day 01 - Linux Authentication Log Analysis
+
+## Document Information
+
+| Field | Details |
+|--------|---------|
+| **Author** | PRASIDDHA PAL |
+| **Role** | SOC Analyst Learner |
+| **Challenge** | 100 Days of SOC Analyst |
+| **Day** | 01 |
+| **Topic** | Coomands used Linux Log Analysis |
+| **Platform** | Kali Linux |
+| **Date** | 01 July 2026 |
+# 04 - Commands Used (Day 1)
+
+## 📌 Linux Log Commands
+
+| Command | Purpose |
+|----------|---------|
+| `cd /var/log` | Go to the log directory |
+| `ls -lh` | List log files |
+| `cat /var/log/auth.log` | View the entire authentication log |
+| `head -20 /var/log/auth.log` | View the first 20 lines |
+| `tail -20 /var/log/auth.log` | View the last 20 lines |
+| `tail -f /var/log/auth.log` | Monitor logs in real time |
+| `grep ssh /var/log/auth.log` | Search for SSH login events |
+| `grep "Failed password" /var/log/auth.log` | Find failed login attempts |
+| `last` | View successful login history (`wtmp`) |
+| `sudo lastb` | View failed login history (`btmp`) |
+| `lastlog` | Display the last login of all users |
+
+## ✅ Key Takeaway
+
+These are the basic commands every SOC Analyst uses to:
+- Investigate authentication logs
+- Detect failed login attempts
+- Monitor user activity
+- Analyze security incidents
