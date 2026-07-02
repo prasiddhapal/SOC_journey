@@ -5,7 +5,7 @@
 | Field | Details |
 |--------|---------|
 | **Case ID** | SOC-DAY02-001 |
-| **Author** | Your Name |
+| **Author** | PRASIDDHA PAL |
 | **Role** | SOC Analyst Trainee |
 | **Platform** | Kali Linux |
 | **Status** | ✅ Completed |
