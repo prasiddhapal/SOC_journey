@@ -37,7 +37,7 @@ An event timeline organizes security events in chronological order. SOC analysts
 
 ### Event Timeline Evidence
 
-![Event Timeline](../screenshots/06-event-timeline.png)
+![Uploading failedssh.png…]()
 
 ---
 
