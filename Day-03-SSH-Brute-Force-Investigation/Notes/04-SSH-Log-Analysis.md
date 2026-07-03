@@ -1,3 +1,4 @@
+<img width="1316" height="721" alt="failedssh" src="https://github.com/user-attachments/assets/cb619c6d-4a83-4bb5-9394-a9c60bbdad35" />
 # 🛡️ SSH Log Analysis
 
 | Field | Details |
@@ -42,7 +43,7 @@ grep sshd /var/log/auth.log
 
 ### SSH Authentication Log Entries
 
-![SSH Log Analysis](../screenshots/04-ssh-log-analysis.png)
+<img width="1316" height="721" alt="failedssh" src="https://github.com/user-attachments/assets/7dec2346-7765-4c11-9054-6fea0addec80" />
 
 ---
 
