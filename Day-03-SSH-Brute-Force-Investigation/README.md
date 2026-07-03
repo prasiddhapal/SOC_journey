@@ -54,7 +54,7 @@ Day-03-SSH-Brute-Force-Investigation
 │   ├── 05-Commands-Reference.md
 │   ├── 06-Event-Timeline.md
 │   ├── 07-Investigation-Conclusion.md
-│   └── 08-Learning-Notes.md
+│   
 │
 └── resources
 ```
