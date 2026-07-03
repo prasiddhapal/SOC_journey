@@ -28,7 +28,7 @@ An incorrect password was entered multiple times to intentionally generate faile
 
 ### Screenshot – Failed SSH Authentication
 
-![Failed SSH Authentication](../screenshots/01-failed-ssh-authentication.png)
+<img width="1316" height="721" alt="failedssh" src="https://github.com/user-attachments/assets/c1ede278-a9bc-4932-b91b-0ce59c3856b8" />
 
 ---
 
