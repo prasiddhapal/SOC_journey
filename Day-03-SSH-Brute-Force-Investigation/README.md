@@ -56,7 +56,6 @@ Day-03-SSH-Brute-Force-Investigation
 │   ├── 07-Investigation-Conclusion.md
 │   └── 08-Learning-Notes.md
 │
-├── screenshots
 └── resources
 ```
 
