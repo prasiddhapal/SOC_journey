@@ -1,3 +1,4 @@
+<img width="637" height="105" alt="Screenshot From 2026-07-03 20-24-48" src="https://github.com/user-attachments/assets/5a0d08ec-468f-4223-a24e-d8a612e61df9" />
 # 🛡️ Invalid User Attempts
 
 | Field | Details |
@@ -42,7 +43,7 @@ grep "Invalid user" /var/log/auth.log
 
 ### Invalid User Event
 
-![Invalid User](../screenshots/02-invalid-user.png)
+<img width="637" height="105" alt="Screenshot From 2026-07-03 20-24-48" src="https://github.com/user-attachments/assets/1f46e8bd-9a62-491c-8cd5-3d8f3cb67b38" />
 
 ---
 
