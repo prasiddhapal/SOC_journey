@@ -40,7 +40,7 @@ Day 4 focused on Linux user management, file ownership, permissions, and access 
 | `05-chmod.md` | Changing file permissions |
 | `06-chown.md` | Changing ownership |
 | `07-umask.md` | Default file permissions |
-| `08-Learning-Notes.md` | Day 4 summary |
+| `08-Learning-Notes.md` | Day 4 summary|
 
 ---
 
