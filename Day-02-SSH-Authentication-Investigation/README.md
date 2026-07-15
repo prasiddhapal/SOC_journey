@@ -62,4 +62,4 @@ Understand how SSH authentication works and investigate successful SSH login eve
 
 # 🎯 Outcome
 
-Successfully generated and investigated a real SSH authentication event using a  Linux lab. The investigation confirmed a successful public key authentication from the local host (`127.0.0.1`) with no indicators of malicious activity.
+Successfully generated and investigated a real SSH authentication event using a Kali  Linux lab. The investigation confirmed a successful public key authentication from the local host (`127.0.0.1`) with no indicators of malicious activity.
