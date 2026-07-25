@@ -1,5 +1,4 @@
-# 🛡️ SOC Journey – From Linux to AI-Augmented Security Operations
-
+🛡️ SOC Journey | Blue Team | Threat Hunting | Incident Response | AI-Augmented Security Operations
 A hands-on cybersecurity learning repository documenting my journey toward becoming a **Next-Generation Security Operations Center (NSOC) Analyst**.
 
 This repository focuses on practical Blue Team skills through Linux administration, networking, log analysis, threat detection, incident response, security automation, and AI-assisted SOC workflows.
