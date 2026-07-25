@@ -84,4 +84,4 @@ During this lab:
 - File extensions should never be trusted without verification.
 - SHA-256 provides reliable file integrity verification.
 - File metadata helps establish investigation timelines.
-- File investigation requires correlating multiple sources of evidence before taking action
+- File investigation requires correlating multiple sources of evidence before taking action.
