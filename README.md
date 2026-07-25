@@ -1,43 +1,56 @@
-# 🛡️ SOC Journey
+# 🛡️ SOC Journey – From Linux to AI-Augmented Security Operations
 
-A hands-on cybersecurity learning repository documenting my practical journey toward becoming a **Security Operations Center (SOC) Analyst**.
+A hands-on cybersecurity learning repository documenting my journey toward becoming a **Next-Generation Security Operations Center (NSOC) Analyst**.
 
-This repository focuses on developing real-world Blue Team skills through Linux administration, networking, system security, log analysis, and SOC investigation workflows. Each module includes practical labs, technical documentation, interview preparation, and screenshots to reinforce learning.
+This repository focuses on practical Blue Team skills through Linux administration, networking, log analysis, threat detection, incident response, security automation, and AI-assisted SOC workflows.
 
----
-
-# 🎯 Objectives
-
-- Build a strong foundation in Linux and Networking
-- Develop practical SOC investigation skills
-- Learn system security and log analysis
-- Practice incident investigation workflows
-- Prepare for SOC Analyst interviews
-- Maintain professional technical documentation
+Every module contains practical labs, investigation scenarios, interview preparation, and documentation based on real-world SOC methodologies.
 
 ---
 
-# 📚 Learning Roadmap
+# 🎯 Career Goal
+
+Become a Security Operations Center (SOC) Analyst capable of:
+
+- Investigating security incidents
+- Performing log analysis
+- Detecting threats
+- Conducting incident triage
+- Automating repetitive investigations
+- Working with AI-assisted SOC workflows
+- Supporting Security Operations in modern enterprise environments
+
+---
+
+# 🚀 Learning Roadmap
 
 | Module | Status |
 |---------|:------:|
 | Linux Fundamentals | ✅ |
-| Linux File System | ✅ |
-| Linux Users & Permissions | ✅ |
-| Linux Permissions | ✅ |
-| Process Management | ✅ |
-| Linux Services & Logs | ✅ |
+| Linux Administration | ✅ |
+| Linux Security | ✅ |
+| Linux Log Analysis | ✅ |
 | Linux Networking | ✅ |
-| Linux Network Analysis | ✅ |
-| Linux Firewall & System Security | ✅ |
+| Network Investigation | ✅ |
 | Bash Scripting | ⏳ |
 | Windows Administration | ⏳ |
-| Windows Security | ⏳ |
+| Windows Event Logs | ⏳ |
 | Active Directory | ⏳ |
+| PowerShell for SOC | ⏳ |
 | SIEM Fundamentals | ⏳ |
+| Microsoft Sentinel | ⏳ |
+| Splunk | ⏳ |
+| Wazuh | ⏳ |
 | Threat Hunting | ⏳ |
+| Detection Engineering | ⏳ |
+| Sigma Rules | ⏳ |
+| YARA | ⏳ |
+| MITRE ATT&CK | ⏳ |
 | Incident Response | ⏳ |
+| Digital Forensics | ⏳ |
 | Malware Analysis | ⏳ |
+| Cloud Security | ⏳ |
+| AI-Assisted SOC Operations | ⏳ |
 
 ---
 
@@ -45,116 +58,208 @@ This repository focuses on developing real-world Blue Team skills through Linux 
 
 ```text
 SOC_Journey/
-│
-├── Day-01-Linux-Basics/
-├── Day-02-Linux-File-System/
-├── Day-03-Linux-Users-and-Permissions/
-├── Day-04-Linux-Permissions/
-├── Day-05-Process-Management/
-├── Day-06-Linux-Services-and-Logs/
-├── Day-07-Linux-Networking-for-SOC-Analysts/
-├── Day-08-Linux-Network-Analysis/
-├── Day-09-Linux-Firewall-and-System-Security/
-└── ...
+
+├── Linux/
+├── Networking/
+├── Windows/
+├── Active-Directory/
+├── SIEM/
+├── Threat-Hunting/
+├── Incident-Response/
+├── Detection-Engineering/
+├── Malware-Analysis/
+├── Cloud-Security/
+├── AI-for-SOC/
+└── Projects/
 ```
 
 ---
 
-# 🛠️ Skills Covered
+# 🛠️ Technical Skills
 
-### Linux
-- Linux Commands
+## Linux
+
+- Linux Administration
 - File System Management
 - Users & Permissions
 - Process Management
-- Services & Logs
-- Networking
-- Firewall Management
+- System Services
+- Log Analysis
+- Network Troubleshooting
+- Bash Automation
 
-### Networking
-- IP Addressing
-- Routing
+---
+
+## Networking
+
+- TCP/IP
 - DNS
+- DHCP
+- Routing
+- SSH
+- HTTP/HTTPS
 - Socket Analysis
 - Network Troubleshooting
 
-### Security
-- Authentication
+---
+
+## Security Operations
+
 - Log Analysis
-- Firewall Configuration
-- Defense in Depth
-- System Hardening
-
-### SOC Skills
-- Alert Investigation
-- Evidence Collection
-- Process Analysis
-- Network Investigation
-- Log Correlation
-- Documentation
+- Authentication Investigation
 - Incident Triage
+- Evidence Collection
+- IOC Analysis
+- Threat Hunting
+- Log Correlation
+- Detection Validation
 
 ---
 
-# 📖 Documentation Format
+## Detection Engineering
 
-Each learning module includes:
-
-- `README.md` – Topic overview
-- `commands.md` – Commands practiced
-- `notes.md` – Practical observations and SOC relevance
-- `interview_questions.md` – Interview preparation
-- `Screenshots/` – Practical lab evidence
+- Sigma Rules
+- MITRE ATT&CK
+- IOC Mapping
+- Detection Logic
+- Security Monitoring
 
 ---
 
-# 🔍 Investigation Workflow
+## AI-Assisted SOC Skills
 
-Every investigation follows a structured methodology:
+- AI-assisted Log Analysis
+- AI-assisted Threat Investigation
+- Prompt Engineering for Security
+- AI Validation using Linux Evidence
+- Human Verification of AI Findings
+
+---
+
+# 🔍 Investigation Methodology
+
+Every investigation follows a structured workflow.
 
 ```text
 Alert
-   │
-   ▼
-Collect Evidence
-   │
-   ▼
-Analyze
-   │
-   ▼
-Correlate
-   │
-   ▼
-Conclusion
-   │
-   ▼
-Response
-```
 
-This approach emphasizes evidence-based decision-making instead of assumptions.
+↓
+
+Evidence Collection
+
+↓
+
+Log Analysis
+
+↓
+
+Correlation
+
+↓
+
+Threat Validation
+
+↓
+
+Root Cause Analysis
+
+↓
+
+Response
+
+↓
+
+Documentation
+
+↓
+
+Lessons Learned
+```
 
 ---
 
-# 💻 Tools & Technologies
+# 💻 Tools
 
-- Linux (Kali, Ubuntu)
-- Bash
-- Git & GitHub
+### Operating Systems
+
+- Kali Linux
+- Ubuntu
+
+### Linux Utilities
+
+- grep
+- awk
+- sed
+- tr
+- journalctl
+- find
+- ss
+- netstat
+- curl
+- dig
+- tcpdump
+
+### Security Tools
+
 - OpenSSH
 - UFW
-- Networking Utilities (`ss`, `netstat`, `ping`, `dig`, `curl`)
-- System Logs (`journalctl`, `auth.log`)
+- Git
+- GitHub
 
-*More tools will be added as the learning journey progresses.*
+### Upcoming Tools
+
+- Splunk
+- Microsoft Sentinel
+- Wazuh
+- Sysmon
+- Zeek
+- Suricata
+- Velociraptor
+
+---
+
+# 📖 Documentation Standard
+
+Every module contains:
+
+- README.md
+- notes.md
+- commands.md
+- interview_questions.md
+- practical_lab.md
+- Screenshots/
 
 ---
 
 # 📈 Current Progress
 
-This repository is continuously updated with new labs, documentation, and SOC investigation scenarios as new topics are completed.
+This repository is updated continuously as new practical labs, investigation reports, and security projects are completed.
+
+Current focus:
+
+- Advanced Linux for SOC Analysts
+- Bash Automation
+- Log Analysis
+- Detection Engineering Foundations
 
 ---
 
-## ⭐ Purpose
+# 🎓 Learning Philosophy
 
-The goal of this repository is to build practical cybersecurity skills through consistent hands-on learning, structured documentation, and real-world SOC investigation practices.
+I believe cybersecurity is learned through practice rather than memorization.
+
+Every topic in this repository is reinforced through:
+
+- Practical Labs
+- Real-world Investigation Scenarios
+- Documentation
+- Mock Interviews
+- Evidence-Based Analysis
+
+---
+
+# ⭐ Objective
+
+Build the practical skills required to work as a modern SOC Analyst capable of investigating, validating, and responding to security incidents in AI-assisted Security Operations Centers.
+
+> **"Trust the evidence, validate the data, question every assumption."**
