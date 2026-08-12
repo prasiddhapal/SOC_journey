@@ -1,402 +1,378 @@
 # 🛡️ SOC Journey
 
-### From Linux Fundamentals to AI-Augmented Security Operations
+### Practical Blue Team & Security Operations Portfolio
 
-> **Building practical Blue Team skills through hands-on labs, real-world investigations, detection engineering, and AI-assisted SOC workflows.**
+> Building hands-on SOC investigation, detection, incident response, and AI-assisted security operations skills through practical labs and documented investigations.
 
-![Linux](https://img.shields.io/badge/Linux-Advanced-blue)
+![Linux](https://img.shields.io/badge/Linux-Security-blue)
 ![Blue Team](https://img.shields.io/badge/Blue%20Team-SOC-success)
-![AI](https://img.shields.io/badge/AI-Augmented-purple)
-![Status](https://img.shields.io/badge/Status-Actively%20Learning-brightgreen)
-![Focus](https://img.shields.io/badge/Focus-NSOC%202026-red)
+![AI](https://img.shields.io/badge/AI-Assisted%20SOC-purple)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Focus](https://img.shields.io/badge/Focus-SOC%202026-red)
 
 ---
 
-# 📖 About This Repository
+## About
 
-This repository documents my practical journey toward becoming a **Next-Generation Security Operations Center (NSOC) Analyst**.
+This repository is a practical security operations portfolio documenting the progression from Linux and networking fundamentals into hands-on SOC investigation.
 
-Unlike traditional note repositories, this project focuses on **hands-on Blue Team operations**, including:
+The focus is on **investigating security events, understanding evidence, correlating telemetry, and making defensible security decisions**.
 
-- Linux Administration
-- Threat Detection
-- Log Analysis
-- Incident Investigation
-- Detection Engineering
-- Security Automation
-- AI-Assisted Security Operations
+Current areas include:
 
-Every module contains practical labs, screenshots, investigation scenarios, technical notes, commands, and interview preparation based on real-world SOC methodologies.
-
----
-
-# 🎯 Career Goal
-
-Become a modern **NSOC Analyst** capable of:
-
-- Investigating Security Incidents
-- Performing Threat Hunting
-- Analyzing Linux & Windows Logs
-- Working with SIEM Platforms
-- Detecting Malicious Activity
-- Conducting Incident Response
-- Automating Investigations
-- Using AI responsibly while validating findings with evidence
+* Linux security and administration
+* Log analysis
+* Network investigation
+* SOC alert triage
+* Endpoint and process investigation
+* IOC analysis
+* Phishing investigation
+* Incident response
+* Threat hunting fundamentals
+* AI-assisted SOC investigation
 
 ---
 
-# 🔥 Current Focus
+## Current Capabilities
 
-- Advanced Linux for SOC Analysts
-- Bash Automation
-- Log Analysis
-- Threat Hunting
-- Detection Engineering
-- AI-Assisted SOC Investigation
+### 🐧 Linux & Systems
+
+* Linux administration
+* User and permission management
+* Process investigation
+* Authentication analysis
+* Service management
+* System and security logs
+* Linux networking
+* Bash fundamentals
+
+### 🌐 Network Investigation
+
+* TCP/IP fundamentals
+* DNS investigation
+* HTTP/HTTPS analysis
+* Socket analysis
+* Source/destination analysis
+* Network and proxy correlation
+* IOC investigation
+
+### 🛡️ SOC Operations
+
+* Alert triage
+* Alert prioritisation
+* True Positive / False Positive analysis
+* Process and endpoint investigation
+* Log correlation
+* Timeline construction
+* IOC extraction
+* Incident response decisions
+* Evidence-based reporting
+
+### 🤖 AI-Assisted Security Operations
+
+AI is used as an investigation assistant for:
+
+* Log analysis
+* Command analysis
+* SIEM query generation
+* IOC enrichment
+* Timeline assistance
+* Investigation pivots
+* MITRE ATT&CK research
+* Documentation
+
+**AI-generated findings are validated against security telemetry before being treated as conclusions.**
 
 ---
 
-# 📊 Learning Progress
+## Investigation Methodology
 
-| Module | Status |
-|---------|:------:|
-| Linux Fundamentals | ✅ |
-| Linux Administration | ✅ |
-| Linux Security | ✅ |
-| Linux Log Analysis | ✅ |
-| Linux Networking | ✅ |
-| Network Investigation | ✅ |
-| Bash Scripting | ⏳ |
-| Windows Administration | ⏳ |
-| Windows Security | ⏳ |
-| Active Directory | ⏳ |
-| PowerShell | ⏳ |
-| SIEM Fundamentals | ⏳ |
-| Microsoft Sentinel | ⏳ |
-| Splunk | ⏳ |
-| Wazuh | ⏳ |
-| Threat Hunting | ⏳ |
-| Detection Engineering | ⏳ |
-| Sigma Rules | ⏳ |
-| MITRE ATT&CK | ⏳ |
-| Incident Response | ⏳ |
-| Digital Forensics | ⏳ |
-| Malware Analysis | ⏳ |
-| Cloud Security | ⏳ |
-| AI-Assisted SOC Operations | ⏳ |
+The repository follows a repeatable investigation workflow:
+
+```text
+Alert
+  ↓
+Triage
+  ↓
+Evidence Collection
+  ↓
+Endpoint / Process Analysis
+  ↓
+Network Analysis
+  ↓
+Log Correlation
+  ↓
+IOC Investigation
+  ↓
+Timeline
+  ↓
+Verdict
+  ↓
+Response
+  ↓
+Documentation
+```
+
+### Core Principle
+
+> **Evidence first. Conclusions second.**
 
 ---
 
-# 📂 Repository Structure
+## Practical Investigations
+
+### 🔎 Phishing Investigation
+
+Investigated a simulated phishing incident involving:
+
+* Email sender and domain analysis
+* Malicious URL investigation
+* IOC extraction
+* Browser activity
+* Proxy/log correlation
+* Endpoint activity
+* Severity assessment
+* Incident response recommendations
+
+### 🛡️ SOC Alert Triage
+
+Hands-on SOC alert investigation covering:
+
+* Alert properties
+* Alert prioritisation
+* True Positive / False Positive classification
+* Process investigation
+* PID / PPID analysis
+* PowerShell investigation
+* Network correlation
+* DNS investigation
+* IOC analysis
+* Incident response
+
+**Platform:** TryHackMe SOC L1 Alert Triage
+
+---
+
+## Investigation Examples
+
+### Suspicious Process Chain
+
+```text
+WINWORD.EXE
+     ↓
+powershell.exe
+     ↓
+Encoded / Hidden Command
+     ↓
+External HTTPS Connection
+     ↓
+update.ps1
+```
+
+### Network Correlation
+
+```text
+Process
+  ↓
+DNS Query
+  ↓
+Resolved IP
+  ↓
+Network Connection
+  ↓
+Proxy Request
+  ↓
+Downloaded File
+```
+
+### AI-Assisted Investigation
+
+```text
+Security Alert
+      ↓
+AI-Assisted Analysis
+      ↓
+Investigation Hypothesis
+      ↓
+Real Telemetry
+      ↓
+Human Validation
+      ↓
+Final Decision
+```
+
+---
+
+## Tools & Technologies
+
+### Current
+
+* Linux
+* Bash
+* Git
+* GitHub
+* TryHackMe
+* OpenSSH
+* UFW
+* `grep`
+* `awk`
+* `sed`
+* `journalctl`
+* `ps`
+* `top`
+* `ss`
+* `curl`
+* `dig`
+* `tcpdump`
+
+### Building Toward
+
+* Windows Security
+* PowerShell
+* Splunk
+* Microsoft Sentinel
+* Wazuh
+* Sysmon
+* Wireshark
+* Zeek
+* Suricata
+* Velociraptor
+* Sigma
+* MITRE ATT&CK
+
+---
+
+## Repository Structure
 
 ```text
 SOC_Journey/
 
 ├── Linux/
-│   ├── Linux Fundamentals
-│   ├── Authentication
-│   ├── Process Management
-│   ├── Networking
-│   ├── Security
-│   └── Log Analysis
-│
 ├── Windows/
-│
 ├── Active-Directory/
-│
 ├── SIEM/
-│
 ├── Threat-Hunting/
-│
 ├── Detection-Engineering/
-│
 ├── Incident-Response/
-│
 ├── Malware-Analysis/
-│
 ├── Cloud-Security/
-│
 ├── AI-for-SOC/
-│
 └── Projects/
 ```
 
----
-
-# 🛠️ Technical Skills
-
-## 🐧 Linux
-
-- Linux Administration
-- File System Management
-- Authentication
-- Users & Permissions
-- Process Management
-- Service Management
-- Log Analysis
-- Bash Scripting
-- Network Troubleshooting
-
----
-
-## 🌐 Networking
-
-- TCP/IP
-- DNS
-- DHCP
-- Routing
-- SSH
-- HTTP / HTTPS
-- Socket Analysis
-- Firewall Fundamentals
-
----
-
-## 🛡️ Security Operations
-
-- Log Analysis
-- Authentication Investigation
-- IOC Analysis
-- Incident Triage
-- Evidence Collection
-- Threat Hunting
-- Log Correlation
-- Security Monitoring
-
----
-
-## 🎯 Detection Engineering
-
-- MITRE ATT&CK
-- Sigma Rules
-- IOC Mapping
-- Detection Logic
-- Security Monitoring
-
----
-
-## 🤖 AI-Assisted SOC Skills
-
-- AI-assisted Log Analysis
-- AI-assisted Threat Investigation
-- AI-assisted Documentation
-- Prompt Engineering for Security
-- Human Validation of AI Findings
-
----
-
-# 🔍 Investigation Workflow
-
-Every investigation follows a structured methodology.
+Each practical module is documented with relevant:
 
 ```text
-Alert
-
-↓
-
-Evidence Collection
-
-↓
-
-Log Analysis
-
-↓
-
-Correlation
-
-↓
-
-Threat Validation
-
-↓
-
-Root Cause Analysis
-
-↓
-
-Response
-
-↓
-
-Documentation
-
-↓
-
-Lessons Learned
+README.md
+notes.md
+commands.md
+investigation.md
+incident-response.md
+iocs.md
+interview-questions.md
+Screenshots/
 ```
+
+The exact files vary depending on the investigation.
 
 ---
 
-# 🤖 AI-Assisted Investigation Workflow
+## Current Progress
 
-Modern SOC analysts use AI as an assistant—not as a replacement.
+| Area                      | Status |
+| ------------------------- | :----: |
+| Linux Fundamentals        |    ✅   |
+| Linux Administration      |    ✅   |
+| Linux Security            |    ✅   |
+| Linux Log Analysis        |    ✅   |
+| Linux Networking          |    ✅   |
+| Network Investigation     |    ✅   |
+| Phishing Investigation    |    ✅   |
+| SOC Alert Triage          |    ✅   |
+| Process Investigation     |    ✅   |
+| IOC Analysis              |    ✅   |
+| Incident Investigation    |    ✅   |
+| AI-Assisted Investigation |    ✅   |
+| Windows Security          |   🔄   |
+| PowerShell                |   🔄   |
+| SIEM                      |    ⏳   |
+| Threat Hunting            |    ⏳   |
+| Detection Engineering     |    ⏳   |
+| Incident Response         |   🔄   |
+| Active Directory          |    ⏳   |
+| Malware Analysis          |    ⏳   |
+| Cloud Security            |    ⏳   |
+
+---
+
+## Roadmap
 
 ```text
-Security Alert
-
-↓
-
-AI Initial Summary
-
-↓
-
-Linux Validation
-
-↓
-
-Evidence Collection
-
-↓
-
-Threat Verification
-
-↓
-
-Root Cause Analysis
-
-↓
-
-SOC Report
+Linux & Networking
+        ↓
+SOC Fundamentals
+        ↓
+Windows Security
+        ↓
+SIEM
+        ↓
+Threat Hunting
+        ↓
+Detection Engineering
+        ↓
+Incident Response
+        ↓
+Advanced Blue Team
+        ↓
+AI-Augmented SOC Operations
 ```
 
-> **Principle:** Trust evidence, not assumptions. AI accelerates investigations but every finding must be verified.
+The roadmap is intentionally practical: each major stage is supported by hands-on investigation rather than only theoretical study.
 
 ---
 
-# 💻 Tools & Technologies
+## Documentation Standard
 
-## Operating Systems
+Every investigation aims to answer:
 
-- Kali Linux
-- Ubuntu
+```text
+What happened?
+     ↓
+What evidence supports it?
+     ↓
+How was it investigated?
+     ↓
+What is confirmed?
+     ↓
+What remains unknown?
+     ↓
+What should happen next?
+```
 
----
-
-## Linux Utilities
-
-- grep
-- awk
-- sed
-- tr
-- journalctl
-- find
-- xargs
-- tee
-- ps
-- top
-- ss
-- netstat
-- curl
-- dig
-- tcpdump
+This keeps the repository focused on **analytical reasoning and evidence**, rather than simply recording completed exercises.
 
 ---
 
-## Security Tools
+## Current Objective
 
-- OpenSSH
-- UFW
-- Git
-- GitHub
+Build practical, job-ready SOC investigation capability for **2026 SOC / NSOC roles**.
 
----
+The immediate focus is progressing from Linux-based security investigations into:
 
-## Upcoming Tools
-
-- Splunk
-- Microsoft Sentinel
-- Wazuh
-- Zeek
-- Suricata
-- Velociraptor
-- Sysmon
-- Wireshark
+* Windows telemetry
+* SIEM operations
+* Threat hunting
+* Detection engineering
+* Incident response
+* AI-assisted security operations
 
 ---
 
-# 📖 Documentation Standard
+## Contact
 
-Each learning module includes:
-
-- README.md
-- commands.md
-- notes.md
-- interview_questions.md
-- practical_lab.md
-- Screenshots/
+* **LinkedIn:** [www.linkedin.com/in/prasiddha-pal](http://www.linkedin.com/in/prasiddha-pal)
+* **GitHub:** github.com/prasiddhapal
 
 ---
 
-# 🚀 Featured Projects *(Coming Soon)*
-
-- SSH Brute Force Investigation
-- Linux Log Hunting
-- Authentication Log Analysis
-- Suspicious Process Investigation
-- IOC Hunting
-- Bash Automation for SOC
-- AI-Assisted Incident Investigation
-
----
-
-# 📚 Planned Certifications
-
-- CompTIA Security+
-- Microsoft SC-200
-- Microsoft AZ-500
-- Splunk Core Certified User
-- Blue Team Level 1 (BTL1)
-- Google Cybersecurity Professional Certificate
-
----
-
-# 📈 Repository Statistics
-
-This repository is continuously updated with:
-
-- Hands-on Labs
-- Investigation Reports
-- Linux Commands
-- Blue Team Projects
-- Documentation
-- Interview Preparation
-
-Current Objective:
-
-- Build production-ready SOC investigation skills.
-- Prepare for NSOC Analyst roles (2026).
-- Develop AI-assisted security investigation workflows.
-
----
-
-# 💡 Learning Philosophy
-
-Cybersecurity is learned through **practice, investigation, and repetition**.
-
-Every topic in this repository is reinforced with:
-
-- Practical Labs
-- Real Investigation Scenarios
-- Technical Documentation
-- Mock Interviews
-- Evidence-Based Analysis
-
-The objective is not simply to learn commands, but to understand **why** they are used during real security investigations.
-
----
-
-# ⭐ Mission
-
-Build the practical knowledge, technical skills, and investigative mindset required to become a modern **Next-Generation SOC Analyst** capable of defending enterprise environments using both traditional security techniques and AI-assisted workflows.
-
----
-
-## 📬 Connect With Me
-
-- **LinkedIn:** *www.linkedin.com/in/prasiddha-pal*
-- **GitHub:** *https://github.com/prasiddhapal*
-- **Email:** *prasiddhapal@gmail.com*
-
----
-
-> **"Trust the evidence. Validate the findings. Question every assumption."**
+> **Trust the evidence. Validate the findings. Question every assumption.**
