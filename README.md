@@ -355,7 +355,7 @@ This keeps the repository focused on **analytical reasoning and evidence**, rath
 
 ## Current Objective
 
-Build practical, job-ready SOC investigation capability for **2026 SOC / NSOC roles**.
+Build practical, job-ready SOC investigation capability for **2026 SOC**.
 
 The immediate focus is progressing from Linux-based security investigations into:
 
