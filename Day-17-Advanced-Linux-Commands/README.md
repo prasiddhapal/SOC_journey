@@ -121,7 +121,7 @@ Day-17-Advanced-Linux-Commands/
 
 ✅ Practical Labs Completed
 
-✅ Mock Technical Interviews
+✅ Mock Technical Interview
 
 ✅ SOC Investigation Scenarios
 
