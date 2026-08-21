@@ -118,28 +118,61 @@ Recommended blocking the identified indicators and containing the phishing activ
 * Educate the affected user.
 * Continue monitoring for related indicators.
 
-## 📚 Evidence
+## 📚 Investigation Evidence
 
-Additional investigation material:
+### 📧 01 — Phishing Email
 
-* Phishing investigation
-* Incident response
-* IOC analysis
-* Investigation notes
-* [Screenshots](Screenshots/)
+The initial phishing message impersonated a Windows 11 upgrade notification.
 
-## 💡 Key Lesson
+![Phishing email](Screenshots/01-phishing-email.png)
 
-> **Do not claim compromise without sufficient evidence.**
+**Observed:**
+- Suspicious sender domain
+- Windows upgrade impersonation
+- Embedded malicious link
+- Sender IP identified
 
-A strong SOC investigation separates:
+---
 
-**Observed → Suspicious → Confirmed**
+### 🌐 02 — URL Access & Network Activity
 
-rather than treating every suspicious indicator as proof of compromise.
+Network logs were reviewed to identify connections associated with the suspicious URL.
 
-## ✅ Case Status
+![URL access log](Screenshots/02-url-access-log.png)
 
-**CASE CLOSED — Investigation Completed**
+**Observed:**
+- Internal source host
+- HTTPS connection
+- Destination IP correlation
+- Network activity associated with the investigation
 
-`SOC-020` · `Phishing` · `IOC Analysis` · `Network Investigation`
+---
+
+### 🔎 03 — Raw Network Evidence
+
+Raw log data was reviewed to validate the observed network activity.
+
+![Network investigation](Screenshots/03-network-investigation.png)
+
+**Observed:**
+- Process information
+- Request method
+- Destination details
+- Raw event evidence
+
+---
+
+### 🧭 Evidence Chain
+
+```text
+📧 Phishing Email
+       ↓
+🌐 Malicious URL
+       ↓
+📊 Network Activity
+       ↓
+🔎 Raw Log Analysis
+       ↓
+🧠 Analyst Assessment
+       ↓
+🛡️ Response Recommendation
