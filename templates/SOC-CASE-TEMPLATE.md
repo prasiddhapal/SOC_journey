@@ -1,3 +1,95 @@
+# 🚨 SOC Case — Context-Aware PowerShell Detection
+
+> **Case ID:** DAY-28-SPLUNK-CONTEXT
+> **Case Type:** SIEM / Detection Engineering
+> **Severity:** 🟠 High
+> **Status:** 🟢 Investigation Complete
+> **Environment:** Authorized Security Lab
+
+---
+
+## 🎯 Executive Summary
+
+A context-aware PowerShell detection was developed and
+validated in Splunk.
+
+The detection combines PowerShell command behavior with
+the parent process context to improve risk assessment
+and reduce false positives.
+
+A benign PowerShell execution received a Low severity,
+while a controlled Office-launched encoded PowerShell
+execution received a High severity.
+
+---
+
+## 🧩 Investigation Scenario
+
+The lab contained PowerShell process events with
+different parent processes and command-line behavior.
+
+The investigation focused on identifying suspicious
+PowerShell execution while preserving normal activity.
+
+### Investigation Objectives
+
+- Establish a PowerShell baseline.
+- Identify suspicious command-line indicators.
+- Enrich events using parent-process context.
+- Calculate a risk score.
+- Validate benign and suspicious scenarios.
+- Produce explainable detection results.
+
+---
+
+## 🔎 Key Findings
+
+| Finding | Result |
+|---|---|
+| Normal PowerShell activity | Confirmed |
+| Suspicious PowerShell command | Confirmed |
+| Office parent context | Confirmed |
+| Benign parent context | Confirmed |
+| Risk scoring | Confirmed |
+| Positive detection validation | Confirmed |
+| Negative detection validation | Confirmed |
+
+---
+
+## 🧬 Indicators of Interest
+
+| Type | Value |
+|---|---|
+| Source IP | `10.49.108.48` |
+| User | `Administrator` |
+| Parent Process | `winword.exe` |
+| Process | `powershell.exe` |
+| Suspicious Indicator | `-EncodedCommand` |
+| PID | `5555` |
+
+> These values are controlled lab data and should not be
+> treated as production IOCs.
+
+---
+
+## 🛰️ Investigation Flow
+
+```text
+PowerShell Event
+       ↓
+Command Analysis
+       ↓
+Suspicious Indicator
+       ↓
+Parent Process Context
+       ↓
+Risk Score
+       ↓
+Severity
+       ↓
+Detection Validation
+       ↓
+Analyst Assessment
 🧮 Detection Logic
 
 The lab detection identifies suspicious PowerShell
