@@ -1,269 +1,321 @@
-# 🚨 SOC Case — Context-Aware PowerShell Detection
+# 🚨 SOC Case — [Case Title]
 
-> **Case ID:** `DAY-28-SPLUNK-CONTEXT`
-> **Case Type:** SIEM / Detection Engineering
-> **Severity:** 🟠 High
-> **Status:** 🟢 Investigation Complete
+> **Case ID:** `[DAY-XX-CATEGORY]`
+> **Case Type:** `[Phishing / Network / Authentication / SIEM / Detection Engineering / Threat Hunting / etc.]`
+> **Severity:** `[🔵 Low / 🟡 Medium / 🟠 High / 🔴 Critical]`
+> **Status:** `[🟡 Investigating / 🟢 Investigation Complete / 🔴 Escalated]`
 > **Environment:** Authorized Security Lab
+
+---
 
 ## 🎯 Executive Summary
 
-A context-aware PowerShell detection was developed and validated in Splunk.
+[Provide a concise summary of the security event, what was investigated, the main finding, and the final assessment.]
 
-The detection combines **PowerShell command behavior** with **parent-process context** to improve risk assessment and reduce unnecessary escalation.
+**Investigation objective:**
+[One sentence describing the primary purpose of the investigation.]
 
-A benign PowerShell execution remained **Low / 0**, while a controlled Office-launched encoded PowerShell execution reached **High / 5**.
+---
 
 ## 🧩 Investigation Scenario
 
-The lab contained PowerShell process events with different parent processes and command-line behaviors.
+[Describe the simulated security event or investigation scenario.]
 
-### Objectives
+### Investigation Objectives
 
-* Establish a PowerShell baseline
-* Identify suspicious command indicators
-* Enrich events with parent-process context
-* Calculate a risk score
-* Validate benign and suspicious scenarios
-* Produce explainable detection results
+* [Objective 1]
+* [Objective 2]
+* [Objective 3]
+* [Objective 4]
+
+---
 
 ## 🔎 Key Findings
 
-| Finding                       | Result    |
-| ----------------------------- | --------- |
-| Normal PowerShell activity    | Confirmed |
-| Suspicious PowerShell command | Confirmed |
-| Office parent context         | Confirmed |
-| Benign parent context         | Confirmed |
-| Risk scoring                  | Validated |
-| Positive test                 | PASS      |
-| Negative test                 | PASS      |
+| Finding     | Result                                    |
+| ----------- | ----------------------------------------- |
+| [Finding 1] | `[Confirmed / Suspected / Not Confirmed]` |
+| [Finding 2] | `[Confirmed / Suspected / Not Confirmed]` |
+| [Finding 3] | `[Confirmed / Suspected / Not Confirmed]` |
+| [Finding 4] | `[Confirmed / Suspected / Not Confirmed]` |
+
+> **Analyst note:** Distinguish observed evidence from assumptions and unconfirmed conclusions.
+
+---
 
 ## 🧬 Indicators of Interest
 
-| Type                 | Value             |
-| -------------------- | ----------------- |
-| Source IP            | `10.49.108.48`    |
-| User                 | `Administrator`   |
-| Parent Process       | `winword.exe`     |
-| Process              | `powershell.exe`  |
-| Suspicious Indicator | `-EncodedCommand` |
-| PID                  | `5555`            |
+| Type    | Value          | Relevance          |
+| ------- | -------------- | ------------------ |
+| IP      | `[IP address]` | `[Why it matters]` |
+| Domain  | `[Domain]`     | `[Why it matters]` |
+| URL     | `[URL]`        | `[Why it matters]` |
+| Hash    | `[Hash]`       | `[Why it matters]` |
+| User    | `[Username]`   | `[Why it matters]` |
+| Process | `[Process]`    | `[Why it matters]` |
 
-> These are controlled lab values and are not production IOCs.
+> ⚠️ All indicators in this case are from an authorized lab environment unless explicitly stated otherwise.
+
+---
+
+## 🎯 MITRE ATT&CK Mapping
+
+| Tactic     | Technique     | ID        | Relevance          |
+| ---------- | ------------- | --------- | ------------------ |
+| `[Tactic]` | `[Technique]` | `[T####]` | `[Why it applies]` |
+| `[Tactic]` | `[Technique]` | `[T####]` | `[Why it applies]` |
+
+> Only map techniques supported by the investigation evidence.
+
+---
 
 ## 🛰️ Investigation Flow
 
-```text id="8m2q7v"
-PowerShell Event
-       ↓
-Command Analysis
-       ↓
-Suspicious Indicator
-       ↓
-Parent Process Context
-       ↓
-Risk Score
-       ↓
-Severity
-       ↓
-Validation
-       ↓
+```text
+Alert / Event
+     ↓
+Initial Triage
+     ↓
+Evidence Collection
+     ↓
+Event / Log Analysis
+     ↓
+IOC Extraction
+     ↓
+Correlation
+     ↓
+Detection / Validation
+     ↓
 Analyst Assessment
+     ↓
+Response Recommendation
+     ↓
+Documentation
 ```
 
-## 🧮 Detection Logic
+---
 
-Suspicious PowerShell indicators included:
+## 🧪 Detection Logic
 
-```text id="4v7n1x"
-EncodedCommand
--enc
-ExecutionPolicy
-Download
-IEX
+### Detection Objective
+
+[Describe what the detection is intended to identify.]
+
+### Detection Signals
+
+* `[Signal / Indicator 1]`
+* `[Signal / Indicator 2]`
+* `[Signal / Indicator 3]`
+
+### Contextual Signals
+
+* `[Parent process / user / host / network / authentication context]`
+* `[Additional contextual signal]`
+
+### Detection Query / Logic
+
+```text
+[Insert SIEM query, detection logic, rule logic, or pseudocode]
 ```
 
-Higher-risk parent processes included:
+### Risk / Severity Logic
 
-```text id="6q3m8p"
-winword.exe
-excel.exe
-outlook.exe
+```text
+[Explain how severity or risk is determined.]
 ```
 
-### Risk Formula
-
-```text id="9k5x2m"
-risk_score =
-    (suspicious * 2)
-    +
-    (parent_risk * 3)
-```
-
-This model gives additional weight to parent-process context.
+---
 
 ## 🧪 Validation Results
 
 ### Negative Test
 
-```text id="2m8q6v"
-explorer.exe
-    ↓
-powershell.exe -NoProfile
+```text
+[Benign scenario / expected normal behavior]
 ```
 
-```text id="7x3p9k"
-suspicious    = 0
-parent_risk   = 0
-risk_score    = 0
-severity      = Low
-```
+**Expected Result:** `[Expected behavior]`
 
-**Result: PASS**
+**Observed Result:** `[Observed behavior]`
+
+**Result:** `PASS / FAIL`
+
+---
 
 ### Positive Test
 
-```text id="5v1m8q"
-winword.exe
-    ↓
-powershell.exe -EncodedCommand ABC123
+```text
+[Controlled suspicious scenario]
 ```
 
-```text id="3q7x2n"
-suspicious  = 1
-parent_risk = 1
-risk_score  = 5
-severity    = High
-```
+**Expected Result:** `[Expected detection]`
 
-**Result: PASS**
+**Observed Result:** `[Observed detection]`
+
+**Result:** `PASS / FAIL`
+
+---
+
+### Validation Summary
+
+| Test          | Expected     | Observed     | Result        |
+| ------------- | ------------ | ------------ | ------------- |
+| Negative Test | `[Expected]` | `[Observed]` | `PASS / FAIL` |
+| Positive Test | `[Expected]` | `[Observed]` | `PASS / FAIL` |
+
+---
 
 ## 🛡️ SOC Actions
 
-| Action              | Purpose                        |
-| ------------------- | ------------------------------ |
-| Process baseline    | Establish normal behavior      |
-| Command analysis    | Identify suspicious PowerShell |
-| Parent enrichment   | Add execution context          |
-| Risk scoring        | Prioritize events              |
-| Positive validation | Confirm detection behavior     |
-| Negative validation | Test false-positive behavior   |
+| Action     | Purpose     | Result     |
+| ---------- | ----------- | ---------- |
+| `[Action]` | `[Purpose]` | `[Result]` |
+| `[Action]` | `[Purpose]` | `[Result]` |
+| `[Action]` | `[Purpose]` | `[Result]` |
+| `[Action]` | `[Purpose]` | `[Result]` |
+
+### Analyst Workflow
+
+```text
+01 — Triage
+02 — Investigate
+03 — Correlate
+04 — Validate
+05 — Assess
+06 — Respond
+07 — Document
+```
+
+---
 
 ## 🧠 Analyst Assessment
 
 ### Confirmed
 
-* PowerShell behavior was evaluated from command data.
-* Parent-process context increased detection confidence.
-* Office-launched PowerShell received elevated risk.
-* Explorer-launched PowerShell remained Low risk.
-* The detection produced explainable output.
+* [Confirmed finding]
+* [Confirmed finding]
+* [Confirmed finding]
+
+### Suspected
+
+* [Suspicious activity requiring further investigation]
+* [Potential indicator or behavior]
 
 ### Not Confirmed
 
-* Real-world compromise
-* External malicious infrastructure
-* Production incident
-* Credential theft or persistence
+* [Compromise/activity that could not be established]
+* [Other unverified conclusion]
 
-> **Analyst Principle:** Evaluate suspicious behavior in context rather than relying on a single indicator.
+> **Analyst Principle:** [State the key analytical principle demonstrated by this case.]
+
+---
 
 ## 📋 Recommended Response
 
 For a production alert matching this behavior:
 
-1. Review the PowerShell command line.
-2. Investigate the parent process.
-3. Identify the initiating user.
-4. Review related process activity.
-5. Correlate authentication and network events.
-6. Escalate when additional malicious indicators are present.
+1. [Response action]
+2. [Response action]
+3. [Response action]
+4. [Response action]
+5. [Escalation condition, if applicable]
+
+### Escalation Criteria
+
+Escalate when:
+
+* [Condition 1]
+* [Condition 2]
+* [Condition 3]
+
+---
 
 ## 📚 Investigation Evidence
 
-### 🔎 Evidence 01 — PowerShell Baseline
+### 🔎 Evidence 01 — [Evidence Description]
 
-Normal PowerShell execution was established using `explorer.exe` as the parent process.
+[Briefly explain what this evidence shows and why it matters.]
 
-### 🔎 Evidence 02 — Suspicious Command
+![Evidence 01](Screenshots/01-evidence.png)
 
-The encoded PowerShell command matched the configured suspicious indicators.
+---
 
-### 🔎 Evidence 03 — Parent Context
+### 🔎 Evidence 02 — [Evidence Description]
 
-`winword.exe` was identified as a higher-risk parent process.
+[Briefly explain what this evidence shows and why it matters.]
 
-### 🔎 Evidence 04 — Risk Score
+![Evidence 02](Screenshots/02-evidence.png)
 
-The suspicious command combined with the Office parent produced:
+---
 
-```text id="1n6q4v"
-risk_score = 5
-severity   = High
+### 🔎 Evidence 03 — [Evidence Description]
+
+[Briefly explain what this evidence shows and why it matters.]
+
+![Evidence 03](Screenshots/03-evidence.png)
+
+---
+
+### 🧭 Evidence Chain
+
+```text
+Initial Event
+     ↓
+Evidence 01
+     ↓
+Evidence 02
+     ↓
+Evidence 03
+     ↓
+Correlation
+     ↓
+Analyst Assessment
+     ↓
+Response Decision
 ```
 
-### 🔎 Evidence 05 — Benign Validation
+---
 
-Normal PowerShell activity produced:
+## 📊 Investigation Timeline
 
-```text id="8m2x7q"
-risk_score = 0
-severity   = Low
-```
+| Time / Stage | Event     | Analyst Action | Finding     |
+| ------------ | --------- | -------------- | ----------- |
+| `[Time]`     | `[Event]` | `[Action]`     | `[Finding]` |
+| `[Time]`     | `[Event]` | `[Action]`     | `[Finding]` |
+| `[Time]`     | `[Event]` | `[Action]`     | `[Finding]` |
 
-### 🔎 Evidence 06 — Final Detection
-
-The final detection provided:
-
-**Behavior + Parent Context + Risk Score + Severity + Reason**
+---
 
 ## 💡 Key Lesson
 
-Detection engineering becomes stronger when events are evaluated using multiple contextual signals.
+> [Describe the most important technical or analytical lesson from this investigation.]
 
-Day 28 progressed from simple PowerShell matching toward **context-aware, risk-based, and explainable SOC detection**.
+### What Improved
+
+**Before:** `[Previous/basic approach]`
+
+**After:** `[Improved investigation/detection approach]`
+
+---
+
+## 📈 Skills Demonstrated
+
+`[SOC Operations]` `[Log Analysis]` `[Threat Hunting]` `[Detection Engineering]` `[Incident Response]`
+
+`[Linux]` `[Windows]` `[Splunk]` `[Network Analysis]` `[Python]`
+
+---
+
+## 🔐 Ethics & Lab Scope
+
+This investigation was conducted in an authorized security laboratory environment for educational and defensive security purposes.
+
+No unauthorized systems, accounts, infrastructure, or data were targeted.
+
+---
 
 ## ✅ Case Status
 
-**INVESTIGATION COMPLETE — LAB VALIDATED**
+**[🟢 INVESTIGATION COMPLETE / 🟡 IN PROGRESS / 🔴 ESCALATED]**
 
-`DAY-28-SPLUNK-CONTEXT` · `Detection Engineering` · `PowerShell` · `Process Context`
-
-## 📈 SOC Journey
-
-```text id="6v3m9x"
-Day 20 ─ SOC Phishing Investigation
-   ↓
-Day 21 ─ Alert Triage / Network Investigation
-   ↓
-Day 22 ─ Windows Event Investigation
-   ↓
-Day 23 ─ Splunk Investigation
-   ↓
-Day 24 ─ Splunk Detection
-   ↓
-Day 25 ─ Transaction Analysis
-   ↓
-Day 26 ─ Authentication Hunting
-   ↓
-Day 27 ─ PowerShell Detection
-   ↓
-Day 28 ─ Context-Aware Detection
-```
-
-### Current Direction
-
-```text id="2q8m5v"
-Investigation
-     ↓
-Detection
-     ↓
-Validation
-     ↓
-Context Enrichment
-     ↓
-Risk Scoring
-     ↓
-Explainable SOC Detection
-```
+`[Case ID]` · `[Category]` · `[Technique]` · `[Environment]`
