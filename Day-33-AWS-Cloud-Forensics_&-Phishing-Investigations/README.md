@@ -1,4 +1,4 @@
-# Day 33
+# Day 33 SOC Journey
 
 ## Overview
 Day 33 covered two practical security investigations:
