@@ -387,14 +387,6 @@ Cybersecurity is learned through **practice, investigation, repetition, and vali
 
 The emphasis throughout this repository is:
 
-```text
-Learn → Practice → Investigate → Validate → Document → Improve
-```
-
-The objective is not to memorize tools.
-
-The objective is to develop the ability to **think like an analyst**.
-
 ---
 
 ## ⭐ Closing Principle
