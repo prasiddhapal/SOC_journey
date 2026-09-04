@@ -1,115 +1,55 @@
-# 🛡️ SOC Analyst Journey
-
-A hands-on cybersecurity portfolio focused on building practical Blue Team, SOC investigation, detection engineering, and DFIR skills through structured labs and reproducible investigations.
+# SOC Analyst Journey
+Practical, evidence-driven labs and investigations to build hands-on SOC, detection engineering, and DFIR skills.
 
 ---
 
 ## Table of contents
-- [Purpose](#purpose)
-- [Learning path](#learning-path)
-- [Core areas](#core-areas)
-- [Practical investigation approach](#practical-investigation-approach)
-- [Security toolkit](#security-toolkit)
-- [Repository organization](#repository-organization)
+- [Overview](#overview)
+- [Learning outcomes](#learning-outcomes)
+- [Repository contents](#repository-contents)
+- [Investigation workflow](#investigation-workflow)
 - [Documentation standard](#documentation-standard)
-- [Investigation examples](#investigation-examples)
-- [From detection to investigation](#from-detection-to-investigation)
-- [AI-assisted SOC workflows](#ai-assisted-soc-workflows)
-- [What this repository demonstrates](#what-this-repository-demonstrates)
-- [Professional objective](#professional-objective)
-- [How to use / contribute](#how-to-use--contribute)
+- [Recommended tools & environment](#recommended-tools--environment)
+- [How to use this repository](#how-to-use-this-repository)
+- [Contributing](#contributing)
+- [License & contact](#license--contact)
 
 ---
 
-## Purpose
-This repository documents a practical, evidence-driven journey toward becoming a capable SOC Analyst. The emphasis is on investigations and reasoning — not just cataloging commands. Each module contains:
-- Hands-on labs
-- Real investigation scenarios with reproducible evidence
-- Detection logic and validation
-- Timeline reconstruction and reporting
-- MITRE ATT&CK mapping where applicable
+## Overview
+This repository documents a structured, practical learning path for aspiring SOC analysts and detection engineers. It emphasizes reproducible investigations, evidence-first reasoning, and clear documentation so that other analysts can validate and reproduce findings. Content ranges from foundational OS and networking topics to advanced detection engineering, threat hunting, and incident response.
 
-The goal is to show how and why an analyst investigates an alert, not merely how to run tools.
+Key goals:
+- Teach investigative thinking and workflows used by modern SOC teams
+- Provide reproducible labs and real-world style scenarios
+- Demonstrate detection engineering and SIEM validation
+- Produce clear, shareable investigation artifacts and reports
 
-## Learning path
-Progression used throughout the repository (early topics feed into later, more applied work):
-1. Linux & system fundamentals
-2. Networking & security fundamentals
-3. Windows & endpoint analysis
-4. Logs & authentication investigation
-5. SIEM investigation
-6. Detection engineering
-7. Threat hunting
-8. Incident response & DFIR
-9. Practical security challenges
-10. Automation & AI-assisted SOC workflows
+---
 
-## Core areas
-### Linux & system security
-- Administration, filesystems, permissions, users/groups
-- Processes, services, authentication, system logs, Bash automation
+## Learning outcomes
+After working through these modules you will be able to:
+- Triage alerts and perform structured investigations
+- Collect and validate forensic evidence from endpoints and network sources
+- Reconstruct timelines and map incidents to MITRE ATT&CK
+- Design and validate detection rules and reduce false positives
+- Use automation and AI as analyst assistants while retaining human verification
 
-### Networking
-- TCP/IP, DNS, DHCP, routing, ports/sockets
-- SSH, HTTP/HTTPS, packet & traffic analysis
+---
 
-### Windows & endpoint security
-- Process analysis, PowerShell investigation, process trees
-- Endpoint artifacts, memory forensics, suspicious execution
-
-### SIEM & log investigation
-- Splunk investigations, event correlation, timeline analysis
-- Authentication analysis, context enrichment, risk scoring
-
-### Detection engineering
-- Detection logic, IOC-based & context-aware detection
-- Correlation rules, validation, false-positive handling
-
-### Threat hunting
-- Hypothesis-driven hunting, IOC hunting, cross-event correlation
-
-### Incident response & DFIR
-- Triage, evidence preservation, scope assessment, root-cause analysis
-
-## Practical investigation approach
-A repeatable analyst workflow used across modules:
-1. Alert / Hypothesis
-2. Collect evidence
-3. Analyze artifacts
-4. Correlate events
-5. Validate the finding
-6. Determine scope & impact
-7. Map the attack
-8. Recommend response
-9. Document evidence & lessons
-
-Principles: trust the evidence, validate findings, and treat indicators as starting points.
-
-## Security toolkit
-- Operating systems: Linux, Kali, Windows
-- Shell & scripting: Bash, Python, PowerShell
-- SIEM: Splunk (primary examples)
-- Network analysis: Wireshark, tcpdump
-- Memory forensics: Volatility 3
-- Frameworks: MITRE ATT&CK
-- Version control: Git, GitHub
-- Common utilities: ss, netstat, dig, curl, ssh, ps, journalctl
-
-Tools are introduced to solve investigation problems — not as isolated topics.
-
-## Repository organization
-Top-level layout (each module follows the documentation standard):
+## Repository contents
+Top-level layout (each module follows the Documentation Standard below):
 
 SOC_Journey/
-├── Day-XX-Topic/
-│   ├── README.md          # high-level overview of the module
-│   ├── commands.md        # commands and queries used
-│   ├── findings.md        # concise findings and IOCs
-│   ├── investigation.md   # step-by-step investigation notes
-│   ├── validation.md      # how findings were validated
-│   └── Screenshots/       # evidence (screenshots, images)
+├── Day-XX-Topic/           # Module folder (one per lab / investigation)
+│   ├── README.md           # Module overview & objectives
+│   ├── commands.md         # Reproducible commands, queries, and scripts
+│   ├── investigation.md    # Chronological investigation notes and reasoning
+│   ├── findings.md         # Summary of findings, IOCs, and remediation
+│   ├── validation.md       # How results were validated (tests, queries)
+│   └── Screenshots/        # Evidence artifacts (images, captures)
 
-Other top-level folders:
+Other top-level directories:
 - Detection-Engineering/
 - Threat-Hunting/
 - Incident-Response/
@@ -118,60 +58,86 @@ Other top-level folders:
 - Linux/
 - Projects/
 
-Individual modules may contain additional files depending on the investigation.
+---
 
-## Documentation standard
-Every investigation should make it possible for another analyst to reproduce and understand the work. Include:
-1. What was investigated
-2. Why it was investigated
-3. Which evidence was collected
-4. Exact commands or queries used (with context)
-5. What the evidence showed
-6. How the finding was validated
-7. Indicators of compromise (IOCs) discovered
-8. Mapping to MITRE ATT&CK techniques where applicable
-9. Recommended response actions
-10. Lessons learned
+## Investigation workflow
+Every investigation follows the same repeatable workflow to ensure rigor and reproducibility:
 
-Screenshots support analysis but are not a substitute for textual evidence and commands.
+1. Alert / hypothesis — why this event is suspicious
+2. Evidence collection — what logs, files, or artifacts were gathered
+3. Artifact analysis — what the evidence shows
+4. Correlation — link related events across sources
+5. Validation — confirm findings and eliminate false positives
+6. Scope & impact — identify affected systems and accounts
+7. Attack mapping — map steps to MITRE ATT&CK techniques
+8. Recommendations — containment, remediation, and hardening
+9. Documentation — final report with reproducible commands and artifacts
 
-## Investigation examples
-Modules cover practical scenarios such as:
-- Authentication and login investigations
-- Suspicious process and PowerShell analysis
-- Context-aware Splunk detection and correlation
-- Risk scoring and alert triage
-- Memory forensics and malware execution analysis
-- End-to-end incident investigations with timelines
-
-## From detection to investigation
-Detect → Understand context → Correlate evidence → Investigate → Validate → Assess risk → Respond → Document
-
-A single alert becomes valuable only after enrichment with parent process, user identity, source IP, command line, timing, related processes, and historical context.
-
-## AI-assisted SOC workflows
-AI is an assistant, not an authority. Typical flow:
-- Security data → AI-assisted analysis → Human verification → Evidence validation → Analyst decision → Documented finding
-
-Use AI to accelerate analysis, suggest correlations, and draft documentation — always verify with evidence.
-
-## What this repository demonstrates
-Practical capability in: security monitoring, alert investigation, log analysis, endpoint investigation, detection engineering, threat hunting, incident response, and digital forensics.
-
-## Professional objective
-Develop the investigative mindset and practical skills required for modern SOC / Blue Team roles: independent investigations, detection validation, attack reconstruction, clear communication, and professional reporting.
-
-## How to use & contribute
-- Browse Day-XX modules to follow the learning path.
-- Use commands.md and investigation.md to reproduce analyses.
-- Open issues or pull requests with improvements, new investigations, or corrections.
-- When contributing investigations, follow the documentation standard above.
+Principles: trust the evidence, prefer reproducible commands/queries, and keep analyst decisions auditable.
 
 ---
 
-If you want, I can further:
-- Add a TOC with line anchors for each Day-XX module automatically
-- Create a CONTRIBUTING.md template that enforces the documentation standard
-- Split very long sections into separate markdown files under docs/
+## Documentation standard
+To make every investigation reproducible and reviewable, each module must include:
+1. Objective: What was investigated and why
+2. Evidence collected: Artifacts and data sources with collection timestamps
+3. Reproducible commands & queries: exact commands and SIEM searches
+4. Analysis: What the evidence shows and why it matters
+5. Validation steps: How you confirmed the finding
+6. IOCs: Files, hashes, IPs, domains, registry keys, process hashes, etc.
+7. MITRE ATT&CK mapping (where applicable)
+8. Recommended response & remediation
+9. Lessons learned and open questions
 
-License / contact: add your preferred license or contact details at the end of this file.
+Screenshots are optional supplements; textual evidence and commands are primary.
+
+---
+
+## Recommended tools & environment
+Suggested toolset used across the repository:
+- OS: Linux, Windows, and Kali for lab work
+- Shells & scripting: Bash, Python, PowerShell
+- SIEM: Splunk (primary examples), configurable for others
+- Network analysis: Wireshark, tcpdump
+- Memory forensics: Volatility 3
+- Repository & collaboration: Git, GitHub
+- Utilities: ss, netstat, dig, curl, ssh, ps, journalctl
+
+Each module lists the exact tooling and versions used for reproducibility.
+
+---
+
+## How to use this repository
+- Read module README.md for objectives and prerequisites.
+- Reproduce the lab by following commands.md in order (use an isolated lab environment).
+- Review investigation.md for analyst reasoning and timeline reconstruction.
+- Validate findings with validation.md and any provided test cases.
+- Use findings.md for quick reference when building detection rules or running hunts.
+
+If you want an aggregated Table of Contents for all Day-XX modules, I can generate one automatically.
+
+---
+
+## Contributing
+Contributions are welcome. To maintain quality and reproducibility, please follow these guidelines:
+- Create an issue describing the proposed change or new module before opening a PR.
+- Each investigation contribution MUST follow the Documentation Standard section above.
+- Include reproducible commands, sample logs or sanitized artifacts, and expected results.
+- Add MITRE ATT&CK mappings where applicable.
+- Keep sensitive data out of the repo — sanitize IOCs and replace with placeholders when needed.
+
+I can add a CONTRIBUTING.md template that enforces these rules if you want — say the word and I’ll create it.
+
+---
+
+## License & contact
+Please add your preferred license and contact details here. If you want, I can add a default license (MIT) and a CONTACT.md with your preferred email or link.
+
+---
+
+If you'd like, I can:
+- Commit this updated README to your repository
+- Create a CONTRIBUTING.md template that enforces the documentation standard
+- Generate a per-module TOC with anchors for every Day-XX folder
+
+Tell me which of the above I should do next and I will proceed.
