@@ -1,313 +1,177 @@
-🛡️ SOC Analyst Journey
-A hands-on cybersecurity portfolio focused on building practical Blue Team, SOC investigation, detection engineering, and DFIR skills through structured labs, real investigation scenarios, evidence-based analysis, and professional documentation.
+# 🛡️ SOC Analyst Journey
 
+A hands-on cybersecurity portfolio focused on building practical Blue Team, SOC investigation, detection engineering, and DFIR skills through structured labs and reproducible investigations.
 
+---
 
+## Table of contents
+- [Purpose](#purpose)
+- [Learning path](#learning-path)
+- [Core areas](#core-areas)
+- [Practical investigation approach](#practical-investigation-approach)
+- [Security toolkit](#security-toolkit)
+- [Repository organization](#repository-organization)
+- [Documentation standard](#documentation-standard)
+- [Investigation examples](#investigation-examples)
+- [From detection to investigation](#from-detection-to-investigation)
+- [AI-assisted SOC workflows](#ai-assisted-soc-workflows)
+- [What this repository demonstrates](#what-this-repository-demonstrates)
+- [Professional objective](#professional-objective)
+- [How to use / contribute](#how-to-use--contribute)
 
+---
 
+## Purpose
+This repository documents a practical, evidence-driven journey toward becoming a capable SOC Analyst. The emphasis is on investigations and reasoning — not just cataloging commands. Each module contains:
+- Hands-on labs
+- Real investigation scenarios with reproducible evidence
+- Detection logic and validation
+- Timeline reconstruction and reporting
+- MITRE ATT&CK mapping where applicable
 
+The goal is to show how and why an analyst investigates an alert, not merely how to run tools.
 
+## Learning path
+Progression used throughout the repository (early topics feed into later, more applied work):
+1. Linux & system fundamentals
+2. Networking & security fundamentals
+3. Windows & endpoint analysis
+4. Logs & authentication investigation
+5. SIEM investigation
+6. Detection engineering
+7. Threat hunting
+8. Incident response & DFIR
+9. Practical security challenges
+10. Automation & AI-assisted SOC workflows
 
+## Core areas
+### Linux & system security
+- Administration, filesystems, permissions, users/groups
+- Processes, services, authentication, system logs, Bash automation
 
-🎯 Purpose
-This repository documents a practical journey toward becoming a capable SOC Analyst.
-The focus is not on collecting commands or completing isolated tutorials. Each topic is reinforced through:
-·	Hands-on labs
-·	Security investigations
-·	Detection logic
-·	Evidence collection
-·	Log and process analysis
-·	Threat hunting
-·	Incident-response thinking
-·	MITRE ATT&CK mapping
-·	Screenshots and reproducible evidence
-·	Technical documentation
-·	Interview-oriented explanations
-The goal is to understand how and why an analyst investigates an alert, not simply how to run a tool.
+### Networking
+- TCP/IP, DNS, DHCP, routing, ports/sockets
+- SSH, HTTP/HTTPS, packet & traffic analysis
 
-🧭 Learning Path
-The journey progresses from foundational system knowledge into operational security work:
-Linux & System Fundamentals
-          │
-          ▼
-Networking & Security Fundamentals
-          │
-          ▼
-Windows & Endpoint Analysis
-          │
-          ▼
-Logs & Authentication Investigation
-          │
-          ▼
-SIEM Investigation
-          │
-          ▼
-Detection Engineering
-          │
-          ▼
-Threat Hunting
-          │
-          ▼
-Incident Response & DFIR
-          │
-          ▼
-Practical Security Challenges
-          │
-          ▼
-Automation & AI-Assisted SOC Workflows
+### Windows & endpoint security
+- Process analysis, PowerShell investigation, process trees
+- Endpoint artifacts, memory forensics, suspicious execution
 
-This structure is intentionally iterative. Earlier fundamentals are repeatedly applied during later investigations.
+### SIEM & log investigation
+- Splunk investigations, event correlation, timeline analysis
+- Authentication analysis, context enrichment, risk scoring
 
-🔐 Core Areas
-🐧 Linux & System Security
-·	Linux administration
-·	File systems and permissions
-·	Users and groups
-·	Processes and services
-·	Authentication
-·	System and security logs
-·	Networking utilities
-·	Firewall fundamentals
-·	Bash-based analysis and automation
-🌐 Networking
-·	TCP/IP fundamentals
-·	DNS
-·	DHCP
-·	Routing
-·	Ports and sockets
-·	SSH
-·	HTTP/HTTPS
-·	Network troubleshooting
-·	Packet and traffic analysis
-🪟 Windows & Endpoint Security
-·	Windows process analysis
-·	PowerShell investigation
-·	Process trees and parent-child relationships
-·	Windows command-line analysis
-·	Endpoint artifacts
-·	Authentication and account context
-·	Memory forensics
-·	Suspicious execution analysis
-📊 SIEM & Log Investigation
-·	Splunk investigations
-·	Authentication analysis
-·	Event correlation
-·	Timeline analysis
-·	Suspicious process detection
-·	Context enrichment
-·	Risk scoring
-·	Analyst decision logic
-·	Evidence-based alert triage
-🎯 Detection Engineering
-·	Detection logic
-·	Suspicious behavior identification
-·	IOC-based detection
-·	Context-aware detection
-·	Correlation rules
-·	Risk scoring
-·	Detection validation
-·	False-positive consideration
-·	MITRE ATT&CK alignment
-🔎 Threat Hunting
-·	Hypothesis-driven hunting
-·	IOC hunting
-·	Process and command-line analysis
-·	Authentication hunting
-·	Timeline reconstruction
-·	Cross-event correlation
-·	Endpoint and network context
-🚨 Incident Response & DFIR
-·	Alert triage
-·	Evidence preservation
-·	Scope assessment
-·	Root-cause investigation
-·	Endpoint investigation
-·	Memory forensics
-·	IOC extraction
-·	Attack-chain reconstruction
-·	Containment recommendations
-·	Investigation reporting
+### Detection engineering
+- Detection logic, IOC-based & context-aware detection
+- Correlation rules, validation, false-positive handling
 
-🧪 Practical Investigation Approach
-Investigations are structured around a repeatable analyst workflow:
-Alert / Hypothesis
-        │
-        ▼
-Collect Evidence
-        │
-        ▼
-Analyze Artifacts
-        │
-        ▼
-Correlate Events
-        │
-        ▼
-Validate the Finding
-        │
-        ▼
-Determine Scope & Impact
-        │
-        ▼
-Map the Attack
-        │
-        ▼
-Recommend Response
-        │
-        ▼
-Document Evidence & Lessons
+### Threat hunting
+- Hypothesis-driven hunting, IOC hunting, cross-event correlation
 
-Investigation Principle
-Trust the evidence. Validate the finding. Question the assumption.
-A suspicious indicator is treated as a starting point, not a conclusion.
+### Incident response & DFIR
+- Triage, evidence preservation, scope assessment, root-cause analysis
 
-🛠️ Security Toolkit
-Area	Tools / Technologies
-Operating Systems	Linux, Kali Linux, Windows
-Shell & Scripting	Bash, Python, PowerShell
-SIEM	Splunk
-Network Analysis	Wireshark, tcpdump
-Memory Forensics	Volatility 3
-Security Frameworks	MITRE ATT&CK
-Version Control	Git, GitHub
-Networking	ss, netstat, dig, curl, SSH
-System Analysis	ps, journalctl, Windows process tools
-Practice Platforms	CyberDefenders and other hands-on labs
+## Practical investigation approach
+A repeatable analyst workflow used across modules:
+1. Alert / Hypothesis
+2. Collect evidence
+3. Analyze artifacts
+4. Correlate events
+5. Validate the finding
+6. Determine scope & impact
+7. Map the attack
+8. Recommend response
+9. Document evidence & lessons
 
-Tools are introduced when they solve an investigation problem, rather than being treated as isolated technologies.
+Principles: trust the evidence, validate findings, and treat indicators as starting points.
 
-📁 Repository Organization
-The repository combines structured learning modules with practical investigation work.
+## Security toolkit
+- Operating systems: Linux, Kali, Windows
+- Shell & scripting: Bash, Python, PowerShell
+- SIEM: Splunk (primary examples)
+- Network analysis: Wireshark, tcpdump
+- Memory forensics: Volatility 3
+- Frameworks: MITRE ATT&CK
+- Version control: Git, GitHub
+- Common utilities: ss, netstat, dig, curl, ssh, ps, journalctl
+
+Tools are introduced to solve investigation problems — not as isolated topics.
+
+## Repository organization
+Top-level layout (each module follows the documentation standard):
+
 SOC_Journey/
-│
 ├── Day-XX-Topic/
-│   ├── README.md
-│   ├── commands.md
-│   ├── findings.md
-│   ├── investigation.md
-│   ├── validation.md
-│   └── Screenshots/
-│
-├── Detection-Engineering/
-├── Threat-Hunting/
-├── Incident-Response/
-├── Malware-Analysis/
-├── Windows/
-├── Linux/
-└── Projects/
+│   ├── README.md          # high-level overview of the module
+│   ├── commands.md        # commands and queries used
+│   ├── findings.md        # concise findings and IOCs
+│   ├── investigation.md   # step-by-step investigation notes
+│   ├── validation.md      # how findings were validated
+│   └── Screenshots/       # evidence (screenshots, images)
 
-Individual modules may contain different documentation files depending on the investigation.
+Other top-level folders:
+- Detection-Engineering/
+- Threat-Hunting/
+- Incident-Response/
+- Malware-Analysis/
+- Windows/
+- Linux/
+- Projects/
 
-📝 Documentation Standard
-Practical work is documented so that another analyst can understand:
-1.	What was investigated
-2.	Why it was investigated
-3.	Which evidence was collected
-4.	Which commands or queries were used
-5.	What the evidence showed
-6.	How the finding was validated
-7.	What indicators were identified
-8.	How the activity maps to security concepts
-9.	What response actions are appropriate
-10.	What was learned
-Screenshots are used as supporting evidence, not as a substitute for analysis.
+Individual modules may contain additional files depending on the investigation.
 
-🔬 Investigation Examples
-The repository includes practical work covering areas such as:
-·	Authentication and login investigations
-·	Suspicious process analysis
-·	PowerShell detection
-·	Context-aware Splunk detection
-·	Risk scoring and alert triage
-·	Event correlation and timeline analysis
-·	Network and IOC investigation
-·	Memory forensics
-·	Malware execution analysis
-·	MITRE ATT&CK technique identification
-·	End-to-end incident investigation
+## Documentation standard
+Every investigation should make it possible for another analyst to reproduce and understand the work. Include:
+1. What was investigated
+2. Why it was investigated
+3. Which evidence was collected
+4. Exact commands or queries used (with context)
+5. What the evidence showed
+6. How the finding was validated
+7. Indicators of compromise (IOCs) discovered
+8. Mapping to MITRE ATT&CK techniques where applicable
+9. Recommended response actions
+10. Lessons learned
 
-🧠 From Detection to Investigation
-A major focus of this journey is moving beyond simple alert creation.
-Detect
-  ↓
-Understand Context
-  ↓
-Correlate Evidence
-  ↓
-Investigate
-  ↓
-Validate
-  ↓
-Assess Risk
-  ↓
-Respond
-  ↓
-Document
+Screenshots support analysis but are not a substitute for textual evidence and commands.
 
-For example, a suspicious PowerShell event becomes more useful when combined with:
-·	Parent process
-·	User identity
-·	Source IP
-·	Command line
-·	Event timing
-·	Related processes
-·	Network activity
-·	Risk score
-·	Historical context
-This is the difference between finding an event and investigating an incident.
+## Investigation examples
+Modules cover practical scenarios such as:
+- Authentication and login investigations
+- Suspicious process and PowerShell analysis
+- Context-aware Splunk detection and correlation
+- Risk scoring and alert triage
+- Memory forensics and malware execution analysis
+- End-to-end incident investigations with timelines
 
-🤖 AI-Assisted SOC Workflows
-AI is treated as an analytical assistant, not an authority.
-Security Data
-     ↓
-AI-Assisted Analysis
-     ↓
-Human Verification
-     ↓
-Evidence Validation
-     ↓
-Analyst Decision
-     ↓
-Documented Finding
+## From detection to investigation
+Detect → Understand context → Correlate evidence → Investigate → Validate → Assess risk → Respond → Document
 
-The principle is simple:
-AI can accelerate analysis, but evidence makes the decision.
-AI-assisted work is used for investigation support, documentation, correlation ideas, and workflow improvement while maintaining human validation.
+A single alert becomes valuable only after enrichment with parent process, user identity, source IP, command line, timing, related processes, and historical context.
 
-📈 What This Repository Demonstrates
-This portfolio is designed to demonstrate practical capability in:
-·	Security monitoring
-·	Alert investigation
-·	Log analysis
-·	Endpoint investigation
-·	SIEM usage
-·	Detection engineering
-·	Threat hunting
-·	Incident response
-·	Digital forensics
-·	Evidence-based reasoning
-·	Technical documentation
-The repository is continuously refined as new investigations add deeper technical context.
+## AI-assisted SOC workflows
+AI is an assistant, not an authority. Typical flow:
+- Security data → AI-assisted analysis → Human verification → Evidence validation → Analyst decision → Documented finding
 
-🏁 Professional Objective
-The long-term objective is to develop the practical skills and investigative mindset required for a modern SOC / Blue Team role.
-That means being able to:
-·	Investigate alerts independently
-·	Understand endpoint and network evidence
-·	Build and validate detections
-·	Hunt for related activity
-·	Reconstruct attack timelines
-·	Communicate findings clearly
-·	Recommend appropriate response actions
-·	Document investigations professionally
+Use AI to accelerate analysis, suggest correlations, and draft documentation — always verify with evidence.
 
-📚 Learning Philosophy
-Cybersecurity is learned through practice, investigation, repetition, and validation.
-The emphasis throughout this repository is:
-Learn → Practice → Investigate → Validate → Document → Improve
+## What this repository demonstrates
+Practical capability in: security monitoring, alert investigation, log analysis, endpoint investigation, detection engineering, threat hunting, incident response, and digital forensics.
 
-The objective is not to memorize tools.
-The objective is to develop the ability to think like an analyst.
+## Professional objective
+Develop the investigative mindset and practical skills required for modern SOC / Blue Team roles: independent investigations, detection validation, attack reconstruction, clear communication, and professional reporting.
 
-⭐ Closing Principle
-Detect the signal. Understand the context. Validate the evidence. Investigate the story. Document the conclusion.
-This repository is a living record of that process.
+## How to use & contribute
+- Browse Day-XX modules to follow the learning path.
+- Use commands.md and investigation.md to reproduce analyses.
+- Open issues or pull requests with improvements, new investigations, or corrections.
+- When contributing investigations, follow the documentation standard above.
+
+---
+
+If you want, I can further:
+- Add a TOC with line anchors for each Day-XX module automatically
+- Create a CONTRIBUTING.md template that enforces the documentation standard
+- Split very long sections into separate markdown files under docs/
+
+License / contact: add your preferred license or contact details at the end of this file.
