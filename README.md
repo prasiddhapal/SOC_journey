@@ -1,69 +1,20 @@
 # SOC Analyst Journey
 
-> A hands-on cybersecurity portfolio focused on **SOC operations, SIEM investigation, detection engineering, threat hunting, DFIR, network security, and incident response**.
+> A structured, hands-on cybersecurity portfolio focused on **SOC operations, SIEM, detection engineering, threat hunting, DFIR, network security, identity security, malware analysis, and cloud security**.
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/prasiddhapal/SOC_journey)
-[![Progress](https://img.shields.io/badge/Progress-Day%2044-blue)](https://github.com/prasiddhapal/SOC_journey)
+[![Repository](https://img.shields.io/badge/Portfolio-SOC%20Journey-blue)](https://github.com/prasiddhapal/SOC_journey)
 [![Focus](https://img.shields.io/badge/Focus-SOC%20%7C%20Blue%20Team%20%7C%20DFIR-informational)](https://github.com/prasiddhapal/SOC_journey)
 
-## Overview
+## About
 
-This repository documents a structured **hands-on SOC Analyst development journey**. Each day focuses on a practical security capability and records the investigation process, evidence, findings, validation, and lessons learned.
+This repository documents a practical **SOC Analyst development journey** built around hands-on investigations, security telemetry, incident analysis, detection engineering, and forensic workflows.
 
-The goal is to develop the ability to:
-
-- Triage and investigate security alerts
-- Correlate endpoint, identity, network, and SIEM telemetry
-- Distinguish normal activity from meaningful anomalies
-- Build and validate detection logic
-- Reconstruct attack timelines
-- Perform evidence-driven DFIR investigations
-- Communicate findings clearly and defensibly
-
-**Current progress:** Day 44  
-**Status:** Active  
-**Author:** [Prasiddha Pal](https://github.com/prasiddhapal)
-
----
-
-## Quick Start
-
-```bash
-git clone https://github.com/prasiddhapal/SOC_journey.git
-cd SOC_journey
-```
-
-Choose a completed investigation:
-
-```bash
-cd Day-44-Active-Directory-Threat-Hunting-Kerberos-Anomaly-Validation
-```
-
-Recommended workflow:
+The objective is to develop the ability to investigate real-world security scenarios methodically:
 
 ```text
-README
-  ↓
-Commands / Queries
-  ↓
-Investigation
-  ↓
-Evidence
-  ↓
-Findings
-  ↓
-Validation
-  ↓
-Lessons Learned
-```
-
----
-
-## Investigation Philosophy
-
-Every investigation follows the same analyst discipline:
-
-```text
+Telemetry
+   ↓
 Evidence
    ↓
 Observation
@@ -72,40 +23,28 @@ Hypothesis
    ↓
 Correlation
    ↓
+Validation
+   ↓
 Confidence
    ↓
 Conclusion
    ↓
-Response / Detection
+Detection / Response
 ```
 
-### Core Principles
-
-**Evidence before conclusions**  
-Findings are supported by observable logs, artifacts, queries, or other evidence.
-
-**Correlation over isolated events**  
-Identity, endpoint, network, and SIEM telemetry are correlated wherever possible.
-
-**Suspicious is not confirmed**  
-The documentation separates observations, hypotheses, confidence, and confirmed findings.
-
-**Baseline before anomaly**  
-Normal account, host, service, authentication, and network behavior provides context for hunting.
-
-**Reproducibility**  
-Commands and SIEM queries are documented so investigations can be repeated in authorized lab environments.
+The repository emphasizes **practical investigation and analyst reasoning**, not tool collecting or theoretical memorization.
 
 ---
 
-## Skills Developed
+## Core Capabilities
 
 ### SOC Operations
 - Alert triage
-- Incident investigation
-- Event correlation
-- False-positive validation
+- Security event investigation
+- Incident analysis
 - Evidence collection
+- Timeline reconstruction
+- False-positive validation
 - Investigation reporting
 
 ### SIEM & Detection Engineering
@@ -113,19 +52,19 @@ Commands and SIEM queries are documented so investigations can be repeated in au
 - IBM QRadar
 - Log filtering and correlation
 - Authentication hunting
-- Baseline and anomaly analysis
+- Baseline and anomaly detection
 - Detection logic
 - Detection validation and tuning
 
-### Windows & Identity
-- Windows Security Events
+### Windows & Identity Security
+- Windows Security Event Logs
 - Sysmon
 - PowerShell
 - Active Directory
 - Kerberos
 - NTLM
 - Account and group investigation
-- Privileged-account analysis
+- Privileged identity analysis
 
 ### Network Security
 - TCP/IP
@@ -135,15 +74,15 @@ Commands and SIEM queries are documented so investigations can be repeated in au
 - Wireshark
 - TShark
 - PCAP analysis
-- Reconnaissance
-- C2 investigation
+- Network reconnaissance
+- C2 traffic investigation
 
 ### DFIR & Malware Analysis
 - Volatility 3
 - Memory forensics
 - Process investigation
 - File and artifact analysis
-- JavaScript/browser-extension analysis
+- JavaScript and browser-extension analysis
 - Credential-theft investigation
 - Keylogging and exfiltration analysis
 - IOC extraction
@@ -152,7 +91,7 @@ Commands and SIEM queries are documented so investigations can be repeated in au
 - VirusTotal
 - MalwareBazaar
 - ThreatFox
-- Hash, IP, domain, and infrastructure analysis
+- Hash, domain, IP, and infrastructure analysis
 - MITRE ATT&CK
 
 ### Cloud Security
@@ -163,133 +102,204 @@ Commands and SIEM queries are documented so investigations can be repeated in au
 
 ---
 
-## Journey Progress
+## Tool & Framework Stack
 
-### Days 1–19 | Linux Security Foundations
-
-| Day | Focus |
+| Area | Tools / Frameworks |
 |---|---|
-| 01 | Linux Authentication Logs |
-| 02 | SSH Authentication Investigation |
-| 03 | SSH Brute-Force Investigation |
-| 04 | Linux Users & Permissions |
-| 05 | Process Management |
-| 06 | Linux Services & Logs |
-| 07 | Linux Networking for SOC Analysts |
-| 08 | Linux Network Analysis |
-| 09 | Linux Firewall & System Security |
-| 10 | Linux File Investigation & Integrity |
-| 11 | Linux Archive & Compression |
-| 12 | Linux Special Permissions & Ownership |
-| 13 | Linux Capabilities & Privilege Escalation |
-| 14 | Linux Capability Abuse & SOC Investigation |
-| 15 | Linux Log Hunting & IOC Correlation |
-| 16 | Linux Logging & Investigation |
-| 17 | Advanced Linux Commands |
-| 18 | Linux Process & Network Investigation |
-| 19 | Linux Authentication & User Activity |
+| SIEM | Splunk, IBM QRadar |
+| Network Analysis | Wireshark, TShark, tcpdump |
+| Windows Telemetry | Windows Event Logs, Sysmon, PowerShell |
+| DFIR | Volatility 3 |
+| Threat Intelligence | VirusTotal, MalwareBazaar, ThreatFox |
+| Detection | SPL, MITRE ATT&CK |
+| Linux Analysis | Bash, grep, awk, sed, journalctl, ps, ss |
+| Security Testing | Nmap, Burp Suite, Metasploit, OWASP ZAP |
+| Cloud | AWS, CloudTrail fundamentals, IAM fundamentals |
+| Version Control | Git, GitHub |
 
-### Days 20–30 | SOC Operations & SIEM
-
-| Day | Focus |
-|---|---|
-| 20 | SOC Phishing Investigation |
-| 21 | SOC Alert Triage & Network Investigation |
-| 22 | Windows Event Investigation |
-| 23 | Splunk Investigation |
-| 24 | Splunk Detection |
-| 25 | Splunk Transaction Analysis |
-| 26 | Splunk Authentication Hunting |
-| 27 | Splunk Detection Engineering |
-| 28 | Splunk Context-Aware Detection |
-| 29 | Splunk Alert Triage |
-| 30 | Splunk Correlation Investigations |
-
-### Days 31–39 | DFIR, Threat Intelligence & Enterprise Telemetry
-
-| Day | Focus |
-|---|---|
-| 31 | Memory Forensics |
-| 32 | Threat Intelligence & Wireshark |
-| 33 | AWS Cloud Forensics & Phishing |
-| 34 | Windows Logging, Sysmon & PowerShell |
-| 35 | Linux Logging & SOC |
-| 36 | Network Traffic Analysis |
-| 37 | SIEM Log Analysis |
-| 38 | Brutus Professional |
-| 39 | QRadar 101 |
-
-### Days 40–44 | Advanced Investigations & Identity
-
-| Day | Focus |
-|---|---|
-| 40 | Lockdown — Multi-Stage DFIR Investigation |
-| 41 | Browser Extension Malware Analysis & Covert Data Exfiltration |
-| 42 | Active Directory Security & Windows Identity Investigation |
-| 43 | Active Directory Monitoring & Kerberos Investigation |
-| 44 | Active Directory Threat Hunting & Kerberos Anomaly Validation |
-
----
-
-## Investigation Highlights
-
-### Day 20 — SOC Phishing Investigation
-Email analysis, URL extraction, IOC hunting, and investigation workflow.
-
-### Day 21 — SOC Alert Triage
-Alert validation, process/network correlation, evidence gathering, and response decisions.
-
-### Day 34 — Windows Logging, Sysmon & PowerShell
-Endpoint telemetry, process relationships, PowerShell analysis, and network correlation.
-
-### Day 38 — Brutus Professional
-Authentication abuse, persistence, privilege escalation, and timeline reconstruction.
-
-### Day 39 — QRadar 101
-Multi-source SIEM investigation across Windows, network, and application telemetry.
-
-### Day 40 — Lockdown
-PCAP reconnaissance → SMB → web shell → reverse shell → memory forensics → persistence → malware → C2.
-
-### Day 41 — Browser Extension Malware Analysis
-Credential theft → keylogging → AES encryption → Base64 → covert `<img>` exfiltration → anti-analysis.
-
-### Day 44 — Active Directory Threat Hunting
-Kerberos service-ticket baselining, rare-value hunting, source correlation, negative findings, and false-positive reduction.
+Tools are included because they support **investigation, detection, hunting, response, or interview readiness**. Production experience is not claimed unless it was actually demonstrated hands-on.
 
 ---
 
 ## Investigation Methodology
 
-A typical case follows:
+Every investigation follows a repeatable analyst workflow:
+
+### 1. Alert or Hypothesis
+Define what appears suspicious and why.
+
+### 2. Evidence Collection
+Gather the relevant logs, artifacts, network data, or memory evidence.
+
+### 3. Artifact Analysis
+Determine what each artifact actually shows.
+
+### 4. Correlation
+Connect events across identity, endpoint, network, and SIEM telemetry.
+
+### 5. Validation
+Test the hypothesis and eliminate reasonable benign explanations.
+
+### 6. Scope & Impact
+Identify affected users, systems, accounts, infrastructure, and potential impact.
+
+### 7. Attack Mapping
+Map relevant behavior to MITRE ATT&CK techniques.
+
+### 8. Detection / Response
+Develop detection opportunities and identify appropriate containment or remediation actions.
+
+### 9. Documentation
+Record evidence, reasoning, confidence, conclusions, and reproducible investigation steps.
+
+### Analyst Standard
+
+The repository intentionally separates:
 
 ```text
-1. Alert / Hypothesis
-      ↓
-2. Evidence Collection
-      ↓
-3. Artifact Analysis
-      ↓
-4. Correlation
-      ↓
-5. Validation
-      ↓
-6. Scope & Impact
-      ↓
-7. ATT&CK Mapping
-      ↓
-8. Detection / Response
-      ↓
-9. Documentation
+Evidence
+   ↓
+Observation
+   ↓
+Hypothesis
+   ↓
+Confidence
+   ↓
+Conclusion
 ```
 
-The workflow is iterative. A hypothesis can be strengthened, weakened, or rejected as new evidence appears.
+This prevents a suspicious indicator from being presented as confirmed compromise without sufficient evidence.
+
+---
+
+## Journey Structure
+
+### Phase I | Linux Security Foundations
+
+**Days 1–19**
+
+Core Linux investigation skills:
+
+- Authentication logs
+- SSH
+- Brute-force detection
+- Users and permissions
+- Processes
+- Services and system logs
+- Networking
+- Firewall investigation
+- File integrity
+- SUID/SGID and special permissions
+- Linux capabilities
+- IOC hunting
+- Process/network correlation
+- Authentication and user activity
+
+### Phase II | SOC Operations & SIEM
+
+**Days 20–30**
+
+Practical SOC and SIEM skills:
+
+- Phishing investigation
+- Alert triage
+- Windows event investigation
+- Splunk investigation
+- SPL
+- Detection engineering
+- Transaction analysis
+- Authentication hunting
+- Context-aware detection
+- Alert validation
+- Multi-source correlation
+
+### Phase III | DFIR, Threat Intelligence & Enterprise Telemetry
+
+**Days 31–39**
+
+Advanced investigation capabilities:
+
+- Memory forensics
+- Volatility 3
+- Threat intelligence
+- Wireshark / PCAP analysis
+- AWS cloud forensics fundamentals
+- Windows logging
+- Sysmon
+- PowerShell
+- Linux enterprise logging
+- Network traffic analysis
+- SIEM log analysis
+- HTB Sherlock investigation
+- IBM QRadar
+
+### Phase IV | Advanced Investigations & Identity Security
+
+**Days 40+**
+
+The journey expands into:
+
+- Multi-stage DFIR
+- Malware analysis
+- Browser-extension security
+- Covert data exfiltration
+- Active Directory
+- Kerberos
+- NTLM
+- Privileged identity investigation
+- Identity threat hunting
+- Detection engineering
+- Endpoint investigation
+- Cloud identity security
+- Incident response
+- SOC capstone investigations
+
+---
+
+## Selected Investigation Highlights
+
+### Multi-Stage DFIR
+Reconstructed attack chains through **PCAP, SMB, web shells, reverse shells, memory forensics, persistence, malware analysis, and C2 investigation**.
+
+### SIEM Investigation
+Used **Splunk and QRadar** to investigate authentication, process, network, application, and endpoint telemetry.
+
+### Windows Security Monitoring
+Analyzed Windows authentication and endpoint telemetry including:
+
+```text
+4624
+4625
+4688
+4768
+4769
+4771
+```
+
+along with Sysmon and PowerShell activity.
+
+### Malware Analysis
+Investigated malicious browser-extension behavior involving:
+
+```text
+Credential Theft
+Keylogging
+AES Encryption
+Base64 Encoding
+Covert Exfiltration
+Anti-Analysis
+```
+
+### Identity Threat Hunting
+Used Splunk to baseline Kerberos activity, identify rare service relationships, correlate source information, and validate whether suspicious activity supported a malicious hypothesis.
 
 ---
 
 ## Documentation Standard
 
-A completed module may contain:
+Individual investigations are documented as separate day-level modules.
+
+A module may contain:
 
 ```text
 Day-XX-Topic/
@@ -303,87 +313,166 @@ Day-XX-Topic/
 └── Screenshots/
 ```
 
-### README
-Objectives, scenario, prerequisites, investigation overview, key findings, and attack flow.
+### Documentation expectations
 
-### Commands / Queries
-Reproducible terminal commands and SIEM queries.
+**README.md**
+- Objective
+- Scenario
+- Prerequisites
+- Investigation overview
+- Key findings
+- Investigation flow
 
-### Investigation
-Chronological reasoning, observations, hypotheses, evidence, and correlation.
+**commands.md**
+- Reproducible commands
+- SIEM queries
+- Query purpose
+- Expected output
 
-### Findings
-Executive summary, IOCs, ATT&CK mapping, false positives, impact, response, and lessons learned.
+**investigation.md**
+- Chronological investigation
+- Evidence
+- Analyst reasoning
+- Correlation
+- Tested assumptions
+- Timeline
 
-### Validation
-Independent verification steps, expected results, negative tests, and detection validation.
+**findings.md**
+- Executive summary
+- IOCs
+- ATT&CK mapping
+- False positives
+- Impact
+- Response
+- Lessons learned
 
-### Screenshots
-Meaningful evidence from the investigation. Completion badges are not a substitute for investigation evidence.
+**validation.md**
+- Verification steps
+- Expected results
+- Negative tests
+- Detection validation
+
+**Screenshots/**
+- Meaningful evidence from the investigation
+- Query output
+- Terminal output
+- Forensic artifacts
+- Relevant investigation results
+
+Completion screenshots alone are not treated as evidence of analytical work.
 
 ---
 
-## Tool Stack
+## Portfolio & Interview Focus
 
-| Area | Tools / Frameworks |
-|---|---|
-| SIEM | Splunk, IBM QRadar |
-| Network | Wireshark, TShark, tcpdump |
-| Windows | Sysmon, PowerShell, Windows Event Logs |
-| DFIR | Volatility 3 |
-| Threat Intelligence | VirusTotal, MalwareBazaar, ThreatFox |
-| Detection | SPL, MITRE ATT&CK |
-| Linux | Bash, grep, awk, sed, journalctl, ps, ss |
-| Security Testing | Nmap, Burp Suite, Metasploit, OWASP ZAP |
-| Cloud | AWS, CloudTrail fundamentals, IAM fundamentals |
-| Version Control | Git, GitHub |
+The journey is designed to develop both **technical capability and analyst communication**.
 
-Tools are included because they support investigation, detection, hunting, response, or interview readiness. Production experience is not claimed unless it was actually demonstrated hands-on.
-
----
-
-## Next Phase
+For each investigation, the goal is to explain:
 
 ```text
-Active Directory & Identity
-        ↓
-Kerberos / NTLM
-        ↓
-Privilege Escalation & Lateral Movement
-        ↓
-Windows Endpoint Detection
-        ↓
-Sigma / KQL
-        ↓
+What happened?
+How do you know?
+What evidence supports it?
+What did you correlate?
+What did you rule out?
+How confident are you?
+What would you do next?
+```
+
+This mirrors the reasoning expected in SOC analyst interviews and real incident investigations.
+
+---
+
+## Learning Roadmap
+
+The roadmap evolves as skills are demonstrated.
+
+```text
+Linux Security
+      ↓
+Networking
+      ↓
+Windows & Authentication
+      ↓
+SOC Triage
+      ↓
+SIEM
+      ↓
+Splunk
+      ↓
+Detection Engineering
+      ↓
+Windows Logging / Sysmon
+      ↓
+Network Analysis
+      ↓
+Threat Intelligence
+      ↓
+Memory Forensics
+      ↓
+Cloud Forensics
+      ↓
+Active Directory / Identity
+      ↓
 Threat Hunting
-        ↓
-AWS / Entra Identity
-        ↓
+      ↓
+Endpoint Detection
+      ↓
+Cloud Identity
+      ↓
 Incident Response
-        ↓
-SOC Capstone Investigations
-        ↓
+      ↓
+SOC Capstone
+      ↓
 Job-Ready Assessment
 ```
 
-The roadmap evolves based on demonstrated skills and identified gaps rather than repeating beginner material.
+The next phase prioritizes areas that provide the highest value for a modern SOC analyst:
 
----
-
-## Portfolio Links
-
-- GitHub: https://github.com/prasiddhapal
-- TryHackMe: https://tryhackme.com/p/famous33
-- LinkedIn: https://linkedin.com/in/prasiddha-pal
-- Medium: https://medium.com/@prasiddhapal
+- Active Directory and identity security
+- Endpoint investigation
+- Detection engineering
+- Threat hunting
+- Cloud identity and cloud forensics
+- Incident response
+- Multi-source SOC capstones
 
 ---
 
 ## Security & Ethics
 
-All investigations are performed in **authorized lab environments** using synthetic, sanitized, or intentionally vulnerable data.
+All investigations in this repository are performed in **authorized lab environments** using synthetic, sanitized, or intentionally vulnerable data.
 
-Do not use techniques from this repository against systems, accounts, or networks without explicit authorization.
+Security testing techniques must only be used against systems for which explicit authorization has been provided.
+
+---
+
+## Repository Navigation
+
+Start with a day-level module:
+
+```bash
+git clone https://github.com/prasiddhapal/SOC_journey.git
+cd SOC_journey
+```
+
+Then open the investigation folder of interest and begin with its `README.md`.
+
+The repository is intended to work both as:
+
+- a personal SOC Analyst training record
+- a public cybersecurity portfolio
+- an interview preparation reference
+- a collection of reproducible investigation workflows
+
+---
+
+## Portfolio
+
+- **GitHub:** https://github.com/prasiddhapal
+- **TryHackMe:** https://tryhackme.com/p/famous33
+- **LinkedIn:** https://linkedin.com/in/prasiddha-pal
+- **Medium:** https://medium.com/@prasiddhapal
 
 ---
 
@@ -392,7 +481,5 @@ Do not use techniques from this repository against systems, accounts, or network
 MIT License. Use, fork, and adapt for personal and educational purposes.
 
 ---
-
-**Status: 🟢 Active | Day 44 Complete**
 
 > **Investigate the evidence. Correlate the telemetry. Validate the hypothesis. Document the decision.**
