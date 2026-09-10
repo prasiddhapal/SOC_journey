@@ -1,0 +1,16 @@
+Test_ID,Category,Scenario,Expected_Result,Result,Notes
+D47-01,Benign,Word → PowerShell → Get-ADUser,NOT_DETECTED,PASS,Known-good admin behavior
+D47-02,Benign,Excel → approved administrative script,NOT_DETECTED,PASS,Approved automation
+D47-03,Benign,Helpdesk PowerShell troubleshooting,NOT_DETECTED,PASS,Support workflow
+D47-04,Benign,Office → PowerShell -NoProfile only,NOT_DETECTED,PASS,No strong suspicious switch
+D47-05,Benign,Office → PowerShell visible execution,NOT_DETECTED,PASS,Normal execution
+D47-06,Suspicious,Word → encoded PowerShell,DETECTED,PASS,Encoded command
+D47-07,Suspicious,Word → hidden PowerShell,DETECTED,PASS,Hidden window
+D47-08,Suspicious,Word → encoded + hidden PowerShell,DETECTED,PASS,Multiple indicators
+D47-09,Suspicious,Word → PowerShell + download behavior,DETECTED,PASS,Network corroboration
+D47-10,Suspicious,Word → encoded PowerShell + network,DETECTED,PASS,Correlation case
+D47-11,Edge,Uppercase PowerShell switches,DETECTED,PASS,Case variation
+D47-12,Edge,Full PowerShell executable path,DETECTED,PASS,Path variation
+D47-13,Edge,pwsh.exe,REVIEW,REVIEW,Coverage decision
+D47-14,Edge,Alternate command-line formatting,DETECTED,PASS,Formatting variation
+D47-15,Gap,Encoded command without network,DETECTED,PASS,Base process detection
