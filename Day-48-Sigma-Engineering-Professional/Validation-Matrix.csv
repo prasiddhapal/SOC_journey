@@ -1,0 +1,6 @@
+Test_ID,Scenario,Expected,Actual,Result
+TC01,Benign Word to PowerShell,NOT_DETECTED,NOT_DETECTED,PASS
+TC02,Suspicious Encoded PowerShell,DETECTED,DETECTED,PASS
+TC03,Suspicious Encoded PowerShell plus Network,DETECTED,DETECTED,PASS
+TC04,Hidden PowerShell without Encoding,DETECTED,DETECTED,PASS
+TC05,Portable Sigma field mapping,QUERY_EXECUTES_AND_MATCHES,QUERY_EXECUTES_AND_MATCHES,PASS
