@@ -1,0 +1,4 @@
+Timestamp,DeviceName,AccountName,InitiatingProcessFileName,InitiatingProcessId,RemoteIP,RemotePort,Protocol,Scenario
+2026-09-12T11:18:47,MKT-WS-031,nathan.brooks,powershell.exe,7196,185.174.175.187,443,TCP,Suspicious Encoded PowerShell plus Network
+2026-09-12T12:05:15,MKT-WS-044,jordan.lee,powershell.exe,8224,203.0.113.50,443,TCP,Gap Test Hidden PowerShell plus Network
+2026-09-12T09:15:03,FIN-WS-014,alice.smith,powershell.exe,4120,10.20.0.10,389,TCP,Benign PowerShell LDAP activity
