@@ -1,0 +1,8 @@
+Test_ID,Scenario,Expected,Actual,Result
+TC01,Benign authorized Domain Admins membership change,NOT_DETECTED,NOT_DETECTED,PASS
+TC02,Benign normal authentication,NOT_DETECTED,NOT_DETECTED,PASS
+TC03,Benign single failed authentication,NOT_DETECTED,NOT_DETECTED,PASS
+TC04,Benign file server authentication,NOT_DETECTED,NOT_DETECTED,PASS
+TC05,Suspicious Nathan identity sequence,DETECTED,DETECTED,PASS
+TC06,Suspicious Jordan slower identity sequence,DETECTED,DETECTED,PASS
+TC07,Account lockout/context-only telemetry,NOT_DETECTED,NOT_DETECTED,PASS
