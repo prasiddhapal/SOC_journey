@@ -1,0 +1,13 @@
+Timestamp,EventCode,Computer,SubjectUser,TargetUser,TargetGroup,SourceIP,LogonType,AuthenticationPackage,Scenario
+2026-09-13T08:15:02,4624,DC01,alice.smith,alice.smith,,10.20.10.15,3,Kerberos,Benign normal domain authentication
+2026-09-13T08:18:21,4624,FILE01,alice.smith,alice.smith,,10.20.10.15,3,Kerberos,Benign file server access
+2026-09-13T09:05:44,4625,DC01,bob.jones,bob.jones,,10.20.20.45,3,NTLM,Benign single failed authentication
+2026-09-13T09:12:10,4720,DC01,adm-hr.sullivan,nathan.brooks,,, , ,Benign authorized account creation
+2026-09-13T09:30:15,4728,DC01,adm-hr.sullivan,nathan.brooks,Marketing,10.20.10.20,,,Benign authorized group membership change
+2026-09-13T10:02:33,4625,DC01,nathan.brooks,nathan.brooks,,10.20.30.44,3,NTLM,Suspicious repeated authentication failure
+2026-09-13T10:02:41,4625,DC01,nathan.brooks,nathan.brooks,,10.20.30.44,3,NTLM,Suspicious repeated authentication failure
+2026-09-13T10:02:49,4625,DC01,nathan.brooks,nathan.brooks,,10.20.30.44,3,NTLM,Suspicious repeated authentication failure
+2026-09-13T10:03:02,4624,DC01,nathan.brooks,nathan.brooks,,10.20.30.44,3,NTLM,Suspicious successful authentication after failures
+2026-09-13T10:04:17,4728,DC01,nathan.brooks,nathan.brooks,Domain Admins,10.20.30.44,,,Suspicious privileged group membership modification
+2026-09-13T10:05:03,4768,DC01,nathan.brooks,nathan.brooks,,10.20.30.44,,Kerberos,Suspicious Kerberos authentication after privilege change
+2026-09-13T10:06:11,4740,DC01,adm-security,nathan.brooks,,10.20.30.44,,,Suspicious account lockout investigation
