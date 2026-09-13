@@ -1,0 +1,6 @@
+Timestamp,EventCode,Computer,SubjectUser,TargetUser,TargetGroup,SourceIP,LogonType,AuthenticationPackage,Scenario
+2026-09-13T15:00:11,4625,DC01,jordan.lee,jordan.lee,,10.20.40.55,3,NTLM,Gap test repeated authentication failure
+2026-09-13T15:00:19,4625,DC01,jordan.lee,jordan.lee,,10.20.40.55,3,NTLM,Gap test repeated authentication failure
+2026-09-13T15:00:27,4625,DC01,jordan.lee,jordan.lee,,10.20.40.55,3,NTLM,Gap test repeated authentication failure
+2026-09-13T15:01:02,4624,DC01,jordan.lee,jordan.lee,,10.20.40.55,3,NTLM,Gap test successful authentication
+2026-09-13T15:15:44,4728,DC01,jordan.lee,jordan.lee,Domain Admins,10.20.40.55,,,Gap test delayed privileged group modification
