@@ -1,0 +1,2 @@
+Timestamp,EventCode,Computer,SubjectUser,TargetUser,TargetGroup,SourceIP,LogonType,AuthenticationPackage,Scenario
+2026-09-13T14:15:22,4728,DC01,adm-domain.admin,backup.operator,Domain Admins,10.20.10.25,,,Benign authorized privileged group membership change
