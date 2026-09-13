@@ -1,0 +1,11 @@
+index=main
+(source="identity_events.csv" OR source="identity_regression.csv" OR source="identity_gap_test.csv")
+| eval failed_flag=if(EventCode=4625,1,0)
+| eval success_flag=if(EventCode=4624,1,0)
+| eval privileged_flag=if(EventCode=4728 AND TargetGroup="Domain Admins",1,0)
+| stats sum(failed_flag) as failed_auth sum(success_flag) as successful_auth sum(privileged_flag) as privileged_changes min(_time) as first_seen max(_time) as last_seen values(EventCode) as EventCodes values(SourceIP) as SourceIPs values(TargetGroup) as Groups by SubjectUser
+| eval duration_seconds=last_seen-first_seen
+| eval duration_minutes=round(duration_seconds/60,2)
+| eval DetectionResult=if(failed_auth>=3 AND successful_auth>=1 AND privileged_changes>=1 AND duration_seconds<=1200,"DETECTED","NOT_DETECTED")
+| table SubjectUser failed_auth successful_auth privileged_changes duration_minutes EventCodes SourceIPs Groups DetectionResult
+| sort SubjectUser
